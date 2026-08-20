@@ -58,44 +58,59 @@
   th{background:var(--panel);font-size:12.5px;color:var(--teal-deep);white-space:nowrap}
   .tbl-scroll{overflow-x:auto;margin:14px 0}
 
-  /* flyer mocks */
-  .flyers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 8px}
-  .flyer{aspect-ratio:210/297;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;font-size:10px;position:relative}
-  .flyer .host{font-size:8.5px;letter-spacing:.04em;padding:7px 10px 5px;opacity:.9}
-  .flyer .ttl{font-family:var(--serif);font-weight:600;line-height:1.45;padding:4px 12px 0}
-  .flyer .subttl{padding:4px 12px;font-size:8.5px;opacity:.85}
-  .flyer .chips{display:flex;flex-wrap:wrap;gap:4px;padding:6px 12px}
-  .flyer .chips i{font-style:normal;font-size:8px;border-radius:99px;padding:2px 8px}
-  .flyer .ph{flex:1;margin:6px 12px;border-radius:6px;background-size:cover;background-position:center;min-height:0}
-  .flyer .info{padding:6px 12px 4px;font-size:8.5px;line-height:1.6}
-  .flyer .foot{display:flex;justify-content:space-between;align-items:center;padding:6px 12px 10px;font-size:8px}
-  .flyer .qr{width:26px;height:26px;border-radius:3px;background:
-    repeating-linear-gradient(0deg,currentColor 0 2px,transparent 2px 4px),
-    repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 4px);opacity:.55}
-  .flyer .free{font-weight:700;border-radius:99px;padding:2px 8px;font-size:8.5px}
-  .flyer-label{text-align:center;font-size:12.5px;font-weight:700;margin-top:8px}
-  .flyer-label small{display:block;font-weight:400;color:var(--ink-faint);font-size:11px}
+  /* flyer mocks (実寸感のあるA4モック) */
+  .flyer-stack{display:grid;gap:30px;margin:20px 0 8px;justify-items:center}
+  .flyer-item{width:100%;max-width:540px}
+  .flyer{container-type:inline-size;line-height:1.6;aspect-ratio:210/297;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 6px 30px rgba(16,48,44,.14);display:flex;flex-direction:column;position:relative;width:100%}
+  .flyer .host{display:flex;justify-content:space-between;align-items:center;gap:2cqw;font-size:2.2cqw;letter-spacing:.04em;padding:2.2cqw 4cqw}
+  .flyer .host .fr{font-weight:800;font-size:2.6cqw;border-radius:99px;padding:.8cqw 2.6cqw;white-space:nowrap}
+  .flyer .catch{font-family:var(--serif);font-weight:700;line-height:1.42;padding:4.6cqw 5cqw 0;font-size:7.4cqw}
+  .flyer .stitle{padding:2.4cqw 5cqw 0;font-size:3.5cqw;font-weight:700;opacity:.95}
+  .flyer .whofor{display:flex;flex-direction:column;gap:1.2cqw;padding:3cqw 5cqw 0;font-size:3.1cqw;font-weight:600;line-height:1.6}
+  .flyer .whofor i{font-style:normal}
+  .flyer .whofor i::before{content:"✔";margin-right:1.6cqw;font-weight:800}
+  .flyer .ph{flex:1;margin:3.4cqw 5cqw 0;border-radius:2cqw;background-size:cover;background-position:center;min-height:26cqw}
+  .flyer .datebox{margin:3.6cqw 5cqw 0;border-radius:2cqw;padding:3cqw 4cqw;display:flex;align-items:center;gap:4cqw}
+  .flyer .datebox .d1{font-size:6.4cqw;font-weight:800;white-space:nowrap;line-height:1.2}
+  .flyer .datebox .d1 small{display:block;font-size:2.6cqw;font-weight:700;opacity:.85}
+  .flyer .datebox .d2{font-size:3cqw;line-height:1.65}
+  .flyer .badges{display:flex;flex-wrap:wrap;gap:1.8cqw;padding:2.6cqw 5cqw 0}
+  .flyer .badges i{font-style:normal;font-size:2.8cqw;font-weight:700;border-radius:99px;padding:1cqw 3cqw}
+  .flyer .foot{display:flex;justify-content:space-between;align-items:center;gap:3cqw;padding:2.6cqw 5cqw 4cqw}
+  .flyer .lect{display:flex;align-items:center;gap:2.4cqw;font-size:2.7cqw;line-height:1.55}
+  .flyer .lect img{width:11cqw;height:11cqw;border-radius:50%;object-fit:cover;flex:0 0 auto}
+  .flyer .apply{display:flex;align-items:center;gap:2.2cqw;font-size:2.7cqw;font-weight:700;text-align:right}
+  .flyer .apply span:first-child{white-space:nowrap}
+  .flyer .qr{width:12cqw;height:12cqw;flex:0 0 auto;border-radius:1.2cqw;background:repeating-linear-gradient(0deg,currentColor 0 1.2cqw,transparent 1.2cqw 2.4cqw),repeating-linear-gradient(90deg,currentColor 0 1.2cqw,transparent 1.2cqw 2.4cqw);opacity:.6}
+  .flyer-label{text-align:center;font-size:13px;font-weight:700;margin-top:10px}
+  .flyer-label small{display:block;font-weight:400;color:var(--ink-faint);font-size:11.5px}
   /* A: teal soft */
-  .fA{background:#fbfdfc;color:#16302c}
+  .fA{background:#f8fcfb;color:#16302c}
   .fA .host{background:#0e7c6e;color:#fff}
-  .fA .ttl{color:#0a5a50;font-size:12.5px}
-  .fA .chips i{background:#e4f1ee;color:#0a5a50}
-  .fA .free{background:#c79a4b;color:#fff}
+  .fA .host .fr{background:#c79a4b;color:#fff}
+  .fA .catch{color:#0a5a50}
+  .fA .whofor i::before{color:#17a294}
+  .fA .datebox{background:#0e7c6e;color:#fff}
+  .fA .badges i{background:#e4f1ee;color:#0a5a50}
   .fA .qr{color:#0a5a50}
   /* B: navy corporate */
   .fB{background:#fff;color:#122a4c}
+  .fB .band{height:1.6cqw;background:linear-gradient(90deg,#b98a2e,#e6c87a)}
   .fB .host{background:#122a4c;color:#fff}
-  .fB .ttl{color:#122a4c;font-size:12px}
-  .fB .chips i{background:#e8edf5;color:#122a4c}
-  .fB .free{background:#b98a2e;color:#fff}
+  .fB .host .fr{background:#b98a2e;color:#fff}
+  .fB .catch{color:#122a4c}
+  .fB .whofor i::before{color:#b98a2e}
+  .fB .datebox{background:#122a4c;color:#fff}
+  .fB .badges i{background:#e8edf5;color:#122a4c}
   .fB .qr{color:#122a4c}
-  .fB .band{height:5px;background:linear-gradient(90deg,#b98a2e,#e6c87a)}
   /* C: warm local */
-  .fC{background:#fffaf2;color:#4a3520}
+  .fC{background:#fff8ef;color:#4a3520}
   .fC .host{background:#e07a3f;color:#fff}
-  .fC .ttl{color:#b05a24;font-size:12.5px}
-  .fC .chips i{background:#fdeeda;color:#b05a24}
-  .fC .free{background:#e07a3f;color:#fff}
+  .fC .host .fr{background:#fff;color:#e07a3f}
+  .fC .catch{color:#b05a24}
+  .fC .whofor i::before{color:#e07a3f}
+  .fC .datebox{background:#e07a3f;color:#fff}
+  .fC .badges i{background:#fdeeda;color:#b05a24}
   .fC .qr{color:#b05a24}
 
   .titles{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
@@ -135,7 +150,6 @@
 
   @media (max-width:680px){
     .agenda{grid-template-columns:1fr}
-    .flyers{grid-template-columns:1fr;max-width:320px;margin-left:auto;margin-right:auto}
     .flow{grid-template-columns:1fr 1fr;gap:16px 0}
     .fstep:not(:last-child)::after{display:none}
     .kpi{grid-template-columns:1fr 1fr}
@@ -148,9 +162,9 @@
 
 <header class="cover">
   <div class="wrap">
-    <span class="tag">お打ち合わせ資料</span>
-    <h1>足柄上商工会「お金の勉強会」<br>キックオフのご相談</h1>
-    <p class="sub">先日は前向きなお返事をいただき、ありがとうございます。12月の開催に向けて、この資料に沿って進め方をご相談できたらうれしいです。</p>
+    <span class="tag">チームMTG資料</span>
+    <h1>足柄上商工会「お金の勉強会」<br>12月開催に向けた作戦会議</h1>
+    <p class="sub">井上さん・滑川さんのおかげで、12月開催に向けて大きく前進しました。決めることをこの1枚に整理したので、上から順にサクッと決めていけたらと思います。</p>
     <div class="meta">
       <span>fulfull株式会社 森川 満章</span>
       <span>12月初旬 開催予定</span>
@@ -162,13 +176,13 @@
 <main class="wrap">
 
   <section>
-    <div class="sec-head"><span class="sec-num">0</span><h2>本日ご相談したいこと（アジェンダ）</h2></div>
+    <div class="sec-head"><span class="sec-num">0</span><h2>今日決めたいこと（アジェンダ）</h2></div>
     <div class="agenda">
-      <div class="a"><span class="n">1</span><div><b>当日の商工会さんの反応・肌感</b><span>訪問いただいたお二人から伺いたいです</span></div></div>
+      <div class="a"><span class="n">1</span><div><b>当日の商工会さんの反応・肌感</b><span>訪問したお二人から、ぜひ共有を</span></div></div>
       <div class="a"><span class="n">2</span><div><b>日程の候補</b><span>こちらの調整可能日をお持ちしました</span></div></div>
       <div class="a"><span class="n">3</span><div><b>開催方法（対面×オンライン併用）</b><span>当日の運営分担のご相談</span></div></div>
       <div class="a"><span class="n">4</span><div><b>講座の中身・見せ方</b><span>福利厚生前面の構成案</span></div></div>
-      <div class="a"><span class="n">5</span><div><b>チラシのデザイン</b><span>3案お持ちしました＋タイトル候補</span></div></div>
+      <div class="a"><span class="n">5</span><div><b>チラシのデザイン</b><span>3案つくりました＋タイトル候補</span></div></div>
       <div class="a"><span class="n">6</span><div><b>セミナー後の個別相談の流れ</b><span>リードの受け方・フォロー分担</span></div></div>
       <div class="a"><span class="n">7</span><div><b>費用・お金の流れの整理</b><span>すっきりさせておきたい3点</span></div></div>
       <div class="a"><span class="n">8</span><div><b>成果の記録方法</b><span>次につなげるための1枚シート</span></div></div>
@@ -177,9 +191,9 @@
 
   <section>
     <div class="sec-head"><span class="sec-num">1</span><h2>当日の商工会さんの反応・肌感</h2></div>
-    <p>ご訪問いただいたときの空気感を、ぜひ教えてください。内容づくりの精度が上がります。</p>
+    <p>訪問したときの空気感を共有してもらえると、講座づくりの精度がぐっと上がります。</p>
     <div class="ask">
-      <div class="k">伺いたいこと</div>
+      <div class="k">聞きたいこと</div>
       <ul>
         <li>津田事務局長はじめ、商工会さんが一番期待していそうなことは？（従業員支援？ 会員サービスの目玉？）</li>
         <li>参加者のイメージ（年齢層・経営者と従業員の比率・人数の肌感）</li>
@@ -191,7 +205,7 @@
 
   <section>
     <div class="sec-head"><span class="sec-num">2</span><h2>日程の候補</h2></div>
-    <p>12月初旬・平日の夕方以降で、こちらの調整可能日です。津田事務局長へのご連絡にお使いください。</p>
+    <p>12月初旬・平日の夕方以降で、森川の調整可能日です。津田事務局長への候補日連絡に、そのまま使ってください。</p>
     <div class="dates">
       <div class="date">12/3（木）<small>18時以降OK</small></div>
       <div class="date">12/8（火）<small>18時以降OK</small></div>
@@ -209,7 +223,7 @@
   <section>
     <div class="sec-head"><span class="sec-num">3</span><h2>開催方法：対面×オンライン併用について</h2></div>
     <p>ハイブリッド開催、<span class="hi">対応できます</span>。オンラインセミナーは年間200本ほど開催しているので、必要であれば配信・Zoom運営ごとこちらで巻き取ることもできます。</p>
-    <p>そのうえで、<strong>Zoomのホストをどちらが持つか</strong>と、<strong>当日の会場側の人手</strong>の2点をご相談させてください。</p>
+    <p>そのうえで、<strong>Zoomのホストをどちらが持つか</strong>と、<strong>当日の会場側の人手</strong>の2点を、この場で決めたいです。</p>
     <div class="tbl-scroll">
       <table>
         <tr><th>役割</th><th>内容</th><th>担当（案）</th></tr>
@@ -238,7 +252,7 @@
         </tr>
       </table>
     </div>
-    <p style="font-size:14px"><span class="hi">どちらで開催する場合も</span>、本番の1〜2週間前に接続リハーサルを1回入れて、<strong>①チャット可否 ②画面共有 ③録画</strong> の3点を実機確認させてください（こちらから伺います）。</p>
+    <p style="font-size:14px"><span class="hi">どちらで開催する場合も</span>、本番の1〜2週間前に接続リハーサルを1回入れて、<strong>①チャット可否 ②画面共有 ③録画</strong> の3点を実機確認しましょう（リハの段取りはこちらでやります）。</p>
 
     <div class="ask">
       <div class="k">確認したいこと</div>
@@ -272,50 +286,84 @@
 
   <section>
     <div class="sec-head"><span class="sec-num">5</span><h2>チラシデザイン 3案</h2></div>
-    <p>福利厚生を前面にした3方向でご用意しました。方向性を決めていただければ、日程確定後すぐ印刷用データまで仕上げます（9月半ばの郵送に間に合わせます）。</p>
-    <div class="flyers">
+    <p>福利厚生を前面にした3方向でご用意しました。この場で方向性を決めてもらえれば、日程が入り次第すぐ印刷用データまで仕上げます（9月半ばの郵送に間に合わせます）。</p>
+    <div class="flyer-stack">
 
-      <div>
+      <div class="flyer-item">
         <div class="flyer fA">
-          <div class="host">主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</div>
-          <div class="ttl">従業員の“お金の安心”をつくる<br>福利厚生セミナー</div>
-          <div class="subttl">〜知識ゼロでOK・家族で役立つお金のきほん〜</div>
-          <div class="chips"><i>新NISA・iDeCoのきほん</i><i>固定費の見直し</i><i>質問タイムあり</i></div>
+          <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
+          <div class="catch">その貯金だけで、<br>この先も安心ですか？</div>
+          <div class="stitle">従業員の“お金の安心”をつくる 福利厚生セミナー</div>
+          <div class="whofor">
+            <i>貯金はあるけど、このままでいいのか不安</i>
+            <i>新NISA・iDeCo、結局なにから始めれば？</i>
+            <i>教育費や老後のお金が、なんとなくモヤモヤする</i>
+          </div>
           <div class="ph" style="background-image:url('images/flyerA.jpg')"></div>
-          <div class="info">📅 12月◯日（◯）18:30〜20:00<br>📍 商工会館 ほか＋オンライン同時配信<br>🎤 講師：森川 満章（マネーセミナー講師）</div>
-          <div class="foot"><span class="free">参加無料</span><span>お申し込みはこちら→</span><span class="qr"></span></div>
+          <div class="datebox">
+            <div class="d1">12/◯<small>（◯曜日）</small></div>
+            <div class="d2">18:30〜20:00（開場18:15）<br>商工会館 ほか＋オンライン同時開催</div>
+          </div>
+          <div class="badges"><i>売り込みなし</i><i>知識ゼロOK</i><i>途中入退室自由</i></div>
+          <div class="foot">
+            <div class="lect"><img src="images/lecturer.jpg" alt="講師 森川満章"><span>講師：森川 満章<br>延べ6,500名超が受講</span></div>
+            <div class="apply"><span>スマホで10秒<br>かんたん申込 →</span><span class="qr"></span></div>
+          </div>
         </div>
-        <div class="flyer-label">A案：安心・やさしい<small>ティール基調。従業員・ご家族に寄り添うトーン</small></div>
+        <div class="flyer-label">A案：安心・やさしい<small>ティール基調。「不安への問いかけ」で自分ごと化 → 福利厚生で受け止める構成</small></div>
       </div>
 
-      <div>
+      <div class="flyer-item">
         <div class="flyer fB">
           <div class="band"></div>
-          <div class="host">主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</div>
-          <div class="ttl">人生100年時代の<br>“お金の備え方”講座</div>
-          <div class="subttl">〜企業の福利厚生としてのマネーセミナー〜</div>
-          <div class="chips"><i>経営者・従業員向け</i><i>NISA・iDeCo</i><i>参加無料</i></div>
+          <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
+          <div class="catch">“お金の備え”は、<br>会社で学ぶ時代へ。</div>
+          <div class="stitle">人生100年時代の「お金の備え方」講座 〜企業の福利厚生として〜</div>
+          <div class="whofor">
+            <i>新NISA・iDeCoを基礎から正しく知りたい</i>
+            <i>老後資金の考え方を一度整理したい</i>
+            <i>従業員の学びの機会をつくりたい経営者の方</i>
+          </div>
           <div class="ph" style="background-image:url('images/flyerB.jpg')"></div>
-          <div class="info">📅 12月◯日（◯）18:30〜20:00<br>📍 商工会館 ほか＋オンライン同時配信<br>🎤 講師：森川 満章（セミナー登壇 累計200回超）</div>
-          <div class="foot"><span class="free">参加無料</span><span>お申し込みはこちら→</span><span class="qr"></span></div>
+          <div class="datebox">
+            <div class="d1">12/◯<small>（◯曜日）</small></div>
+            <div class="d2">18:30〜20:00（開場18:15）<br>商工会館 ほか＋オンライン同時開催</div>
+          </div>
+          <div class="badges"><i>経営者・従業員向け</i><i>登壇実績 200回超</i><i>質問タイムあり</i></div>
+          <div class="foot">
+            <div class="lect"><img src="images/lecturer.jpg" alt="講師 森川満章"><span>講師：森川 満章<br>商工会議所 創業塾 役員</span></div>
+            <div class="apply"><span>お申し込みは<br>こちらから →</span><span class="qr"></span></div>
+          </div>
         </div>
-        <div class="flyer-label">B案：信頼・フォーマル<small>ネイビー基調。東京海上日動さんのトーンと親和</small></div>
+        <div class="flyer-label">B案：信頼・フォーマル<small>ネイビー×ゴールド。東京海上日動さんのトーンと親和。実績数字で信頼を担保</small></div>
       </div>
 
-      <div>
+      <div class="flyer-item">
         <div class="flyer fC">
-          <div class="host">主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</div>
-          <div class="ttl">家族で学べる<br>お金の安心教室</div>
-          <div class="subttl">〜働くみなさんの福利厚生企画・知識ゼロ大歓迎〜</div>
-          <div class="chips"><i>むずかしい言葉なし</i><i>その日から使えるコツ</i><i>オンラインOK</i></div>
+          <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
+          <div class="catch">お金の話、<br>家族でできていますか？</div>
+          <div class="stitle">家族で学べる「お金の安心教室」〜働くみなさんの福利厚生企画〜</div>
+          <div class="whofor">
+            <i>むずかしい言葉ゼロで、基礎から学びたい</i>
+            <i>その日から使えるコツを持ち帰りたい</i>
+            <i>子どもの教育費、そろそろちゃんと考えたい</i>
+          </div>
           <div class="ph" style="background-image:url('images/flyerC.jpg')"></div>
-          <div class="info">📅 12月◯日（◯）18:30〜20:00<br>📍 商工会館 ほか＋オンライン同時配信<br>🎤 講師：森川 満章（お金の先生）</div>
-          <div class="foot"><span class="free">参加無料</span><span>お申し込みはこちら→</span><span class="qr"></span></div>
+          <div class="datebox">
+            <div class="d1">12/◯<small>（◯曜日）</small></div>
+            <div class="d2">18:30〜20:00（開場18:15）<br>商工会館 ほか＋オンライン同時開催</div>
+          </div>
+          <div class="badges"><i>ご家族での参加歓迎</i><i>オンラインOK</i><i>売り込みなし</i></div>
+          <div class="foot">
+            <div class="lect"><img src="images/lecturer.jpg" alt="講師 森川満章"><span>講師：森川 満章<br>Voicy「ふるふるラジオ」配信中</span></div>
+            <div class="apply"><span>スマホで10秒<br>かんたん申込 →</span><span class="qr"></span></div>
+          </div>
         </div>
-        <div class="flyer-label">C案：地元・フランク<small>暖色基調。地域の集まりに来る感覚で参加できるトーン</small></div>
+        <div class="flyer-label">C案：地元・フランク<small>暖色基調。「家族の会話」への問いかけ。地域の集まり感覚で参加できるトーン</small></div>
       </div>
+
     </div>
-    <p class="note">※ 主催・共催の表記、講師の肩書きの出し方（会社名を出すか等）は、この場で方針を確認させてください。</p>
+    <p class="note">※ 主催・共催の表記、講師の肩書きの出し方（会社名を出すか等）も、この場で決めてしまいましょう。</p>
 
     <h3 style="font-family:var(--serif);font-size:18px;font-weight:600;margin:32px 0 4px">タイトル候補（ほかにもこんな切り口があります）</h3>
     <ul class="titles">
@@ -374,7 +422,7 @@
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">9</span><h2>今後に向けて：この座組、他でも動かせます</h2></div>
+    <div class="sec-head"><span class="sec-num">9</span><h2>今後に向けて：この座組、一緒に横展開しませんか</h2></div>
     <p>今回の足柄上商工会さんの形は、<strong>そのまま他の団体にも展開できる座組</strong>だと考えています。</p>
     <div class="scheme">
       <div class="box"><b>保険会社・代理店</b><span>団体との接点・信頼<br>声かけ・調整役</span></div>
@@ -406,6 +454,6 @@
 
 </main>
 
-<footer>fulfull株式会社 ｜ 足柄上商工会「お金の勉強会」お打ち合わせ資料</footer>
+<footer>fulfull株式会社 ｜ 足柄上商工会「お金の勉強会」チームMTG資料</footer>
 </body>
 </html>
