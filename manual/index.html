@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="団体向けマネーセミナー 立ち上げマニュアル（保険会社・代理店のプロモーターの方向け）">
+<title>団体向けマネーセミナー 立ち上げマニュアル｜fulfull株式会社</title>
+<style>
+  :root {
+    --ground:#ffffff; --panel:#f4f8f6; --panel-2:#eef4f1;
+    --ink:#16302c; --ink-soft:#4a615c; --ink-faint:#7c908b; --line:#dde7e3;
+    --teal:#0e7c6e; --teal-deep:#0a5a50; --teal-wash:#e4f1ee;
+    --gold:#c79a4b; --gold-wash:#f7efdd;
+    --shadow:0 1px 2px rgba(16,48,44,.04),0 8px 28px rgba(16,48,44,.06);
+    --serif:"Hiragino Mincho ProN","Yu Mincho",serif;
+    --gothic:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--gothic);line-height:1.9;font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:840px;margin:0 auto;padding:0 26px}
+  .cover{background:linear-gradient(135deg,var(--teal-deep),var(--teal));color:#eafaf7;padding:52px 0 42px}
+  .cover .tag{display:inline-block;font-size:12px;letter-spacing:.14em;font-weight:700;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 14px;color:#fff}
+  .cover h1{font-family:var(--serif);font-size:clamp(23px,4.4vw,34px);font-weight:600;line-height:1.5;margin:18px 0 10px;color:#fff}
+  .cover .sub{color:#cdeae4;font-size:14px;max-width:38em}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+  .sec-num{font-weight:700;font-size:14px;color:#fff;background:var(--teal);width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:9px;transform:translateY(-2px)}
+  .sec-head h2{font-family:var(--serif);font-size:clamp(19px,3vw,24px);font-weight:600;margin:0;line-height:1.45}
+  p{margin:0 0 14px}
+  .hi{color:var(--teal-deep);font-weight:700}
+  .note{font-size:12.5px;color:var(--ink-faint)}
+  table{border-collapse:collapse;width:100%;font-size:13.5px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--panel);font-size:12.5px;color:var(--teal-deep);white-space:nowrap}
+  .tbl-scroll{overflow-x:auto;margin:14px 0}
+  .scheme{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch;margin:16px 0}
+  .scheme .box{background:var(--ground);border:1.5px solid var(--teal);border-radius:12px;padding:13px;text-align:center}
+  .scheme .box b{display:block;font-size:13.5px;color:var(--teal-deep)}
+  .scheme .box span{font-size:11px;color:var(--ink-soft)}
+  .scheme .x{display:grid;place-items:center;font-size:17px;color:var(--gold);font-weight:700}
+  .merits{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}
+  .merit{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:14px 15px}
+  .merit b{display:block;font-size:13.5px;margin-bottom:4px;color:var(--teal-deep)}
+  .merit span{font-size:12.5px;color:var(--ink-soft)}
+  .check{list-style:none;margin:12px 0;padding:0;display:grid;gap:8px}
+  .check li{background:var(--ground);border:1px solid var(--line);border-radius:10px;padding:11px 14px 11px 40px;font-size:14px;position:relative}
+  .check li::before{content:"✓";position:absolute;left:14px;top:10px;color:var(--teal);font-weight:700}
+  .check li small{display:block;font-size:12px;color:var(--ink-faint)}
+  .point{background:var(--gold-wash);border:1px solid color-mix(in srgb,var(--gold) 40%,var(--line));border-radius:12px;padding:15px 18px;margin:14px 0}
+  .point .k{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.06em;margin-bottom:5px}
+  .point ul{margin:0;padding-left:20px;font-size:14px;color:var(--ink-soft)}
+  .point li{margin:4px 0}
+  .steps{margin:16px 0 0;padding:0;list-style:none}
+  .steps li{position:relative;padding:0 0 20px 30px;border-left:2px solid var(--line);margin-left:9px}
+  .steps li:last-child{border-left-color:transparent;padding-bottom:0}
+  .steps li::before{counter-increment:st;position:absolute;left:-13px;top:0;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;content:attr(data-n)}
+  .steps b{font-size:14.5px}
+  .steps .when{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:var(--teal-deep);background:var(--teal-wash);border-radius:99px;padding:1px 9px;vertical-align:middle}
+  .steps span.d{display:block;font-size:13px;color:var(--ink-soft)}
+  .qa{display:grid;gap:10px;margin:14px 0}
+  .qa .q{background:var(--ground);border:1px solid var(--line);border-radius:11px;padding:13px 16px}
+  .qa .q b{display:block;font-size:14px;color:var(--teal-deep);margin-bottom:3px}
+  .qa .q span{font-size:13.5px;color:var(--ink-soft)}
+  .contact{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-top:6px}
+  .contact a{color:var(--teal-deep);font-weight:700;word-break:break-all}
+  footer{text-align:center;padding:30px 0 44px;color:var(--ink-faint);font-size:12px}
+  @media (max-width:640px){
+    .merits{grid-template-columns:1fr}
+    .scheme{grid-template-columns:1fr}
+    .scheme .x{padding:2px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <span class="tag">プロモーターの方向けマニュアル</span>
+    <h1>団体向けマネーセミナー<br>立ち上げマニュアル</h1>
+    <p class="sub">商工会・業種団体・法人のお客様に「福利厚生のお金の勉強会」を届けるための手引きです。講師・教材・チラシ・記録まで fulfull がワンセットで用意するので、このマニュアルの流れに乗せるだけで開催できます。</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <div class="sec-head"><span class="sec-num">1</span><h2>この座組の全体像</h2></div>
+    <div class="scheme">
+      <div class="box"><b>プロモーター（あなた）</b><span>団体との接点・信頼<br>声かけ・調整役</span></div>
+      <div class="x">×</div>
+      <div class="box"><b>団体・企業</b><span>会員/従業員向けの福利厚生<br>会場・告知</span></div>
+      <div class="x">×</div>
+      <div class="box"><b>fulfull（講師）</b><span>講義・教材・チラシ・記録<br>ワンセットで用意</span></div>
+    </div>
+    <p>セミナーは<strong>参加無料・商品の話なし</strong>の教育コンテンツです。当日のアンケートで個別相談の希望を受け付け、後日の相談につなげます。</p>
+    <div class="merits">
+      <div class="merit"><b>団体・企業にとって</b><span>費用ゼロで会員・従業員に喜ばれる福利厚生企画ができる</span></div>
+      <div class="merit"><b>プロモーターにとって</b><span>団体との関係が深まり、参加者との自然な接点が生まれる</span></div>
+      <div class="merit"><b>参加者にとって</b><span>売り込みなしで、お金の基礎を安心して学べる</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">2</span><h2>声かけ先の見つけ方</h2></div>
+    <p>「会員や従業員に、何か還元できる企画を探している」ところが狙い目です。</p>
+    <ul class="check">
+      <li>商工会・商工会議所<small>経営指導員の方がキーパーソン。実績：八王子商工会議所・足柄上商工会</small></li>
+      <li>自治体と包括連携協定のある地域<small>協定の「地域貢献」メニューとして提案しやすい（例：松田町）</small></li>
+      <li>業種団体・組合<small>例：整備工場オーナーの団体（平塚ロータスクラブ様で開催実績）、建設業組合、飲食業組合など</small></li>
+      <li>法人のお客様（従業員向け）<small>福利厚生・健康経営の一環として。東京海上日動あんしん生命様との従業員向けセミナー実績あり</small></li>
+      <li>金融機関・住宅メーカーのお客様向けイベント<small>積水ハウス様（不動産オーナー向け）で開催実績</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">3</span><h2>打診のしかた（伝える要点）</h2></div>
+    <p>売り込みではなく「<span class="hi">会員さん・従業員さん向けの無料の福利厚生企画</span>」として紹介するのがコツです。伝える要点は4つだけです。</p>
+    <div class="point">
+      <div class="k">伝える要点</div>
+      <ul>
+        <li><strong>無料で開催できる</strong>こと（団体側の費用負担なし）</li>
+        <li><strong>商品の話はしない</strong>こと（NISA・iDeCoなどお金の基礎の教育コンテンツ）</li>
+        <li><strong>実績がある</strong>こと（商工会議所・業種団体・企業研修での開催実績。企画書URLを見せる）</li>
+        <li><strong>手間がかからない</strong>こと（チラシ・運営・講師はこちらで用意。団体側は会場と告知だけ）</li>
+      </ul>
+    </div>
+    <p>紹介用の企画書はこちらをそのまま見せてください：<br>
+    <a href="https://mm738966m-boop.github.io/fulfull-ashigarakami-proposal/" style="color:var(--teal-deep);font-weight:700">https://mm738966m-boop.github.io/fulfull-ashigarakami-proposal/</a></p>
+    <p class="note">※ 先方の反応が良ければ、その場で「講師の森川と3人で一度話しませんか」まで進めてもらえるとスムーズです。</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">4</span><h2>開催までの流れ（標準スケジュール）</h2></div>
+    <ul class="steps">
+      <li data-n="1"><b>打診・内諾</b><span class="when">開催の3〜4ヶ月前</span><span class="d">団体のキーパーソンに要点4つで紹介 → 前向きなら fulfull につなぐ</span></li>
+      <li data-n="2"><b>キックオフ打ち合わせ</b><span class="when">3ヶ月前</span><span class="d">日程・会場・対象者・テーマの見せ方・個別相談の流れを決める（fulfull同席）</span></li>
+      <li data-n="3"><b>チラシ制作・確定</b><span class="when">2〜3ヶ月前</span><span class="d">fulfullがデザイン3案を提示 → 団体の意向で決定 → 印刷用データ納品</span></li>
+      <li data-n="4"><b>告知・集客</b><span class="when">2ヶ月前〜</span><span class="d">団体からの郵送・掲示＋プロモーターの個別お声かけ（これが参加率に一番効きます）</span></li>
+      <li data-n="5"><b>リマインド</b><span class="when">1週間前・前日</span><span class="d">申込者へ開催案内の再送。オンライン参加者にはURLと入り方を案内</span></li>
+      <li data-n="6"><b>当日開催</b><span class="when">当日</span><span class="d">講義・配信はfulfull。受付・案内は団体＋プロモーターで分担。最後にアンケートで相談希望を回収</span></li>
+      <li data-n="7"><b>個別相談・フォロー</b><span class="when">1週間以内〜</span><span class="d">希望者に日程打診 → 相談実施 → 記録シートに反映</span></li>
+      <li data-n="8"><b>振り返り・次の提案</b><span class="when">1〜3ヶ月後</span><span class="d">参加数・満足度・相談件数を団体に報告 → 「次回」や「別の団体」へ展開</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">5</span><h2>役割分担</h2></div>
+    <div class="tbl-scroll">
+      <table>
+        <tr><th></th><th>プロモーター</th><th>団体・企業</th><th>fulfull</th></tr>
+        <tr><td>声かけ・調整</td><td>◎ 打診・関係づくり・日程調整</td><td>○ 窓口対応</td><td>○ 打ち合わせ同席</td></tr>
+        <tr><td>告知・集客</td><td>◎ 個別のお声かけ</td><td>◎ 郵送・掲示・案内</td><td>○ チラシ制作・申込フォーム</td></tr>
+        <tr><td>当日運営</td><td>○ 受付・案内の応援</td><td>○ 会場・受付</td><td>◎ 講義・配信・アンケート</td></tr>
+        <tr><td>フォロー</td><td>○ 相談の橋渡し</td><td>−</td><td>◎ 個別相談・記録</td></tr>
+      </table>
+    </div>
+    <p class="note">◎=主担当 ○=協力。個別相談の窓口・体制は案件ごとにキックオフで決めます。</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">6</span><h2>よくある質問</h2></div>
+    <div class="qa">
+      <div class="q"><b>Q. 費用はかからない？</b><span>団体側の費用負担はありません。参加も無料です。（実費が発生する場合はキックオフで事前に整理します）</span></div>
+      <div class="q"><b>Q. 営業っぽくならない？</b><span>講義中に商品の話はしません。中立的なお金の基礎教育です。相談したい人だけがアンケートで手を挙げる設計なので、団体の中立性を損ないません。</span></div>
+      <div class="q"><b>Q. オンラインでもできる？</b><span>できます。対面・オンライン・ハイブリッドいずれも対応（オンライン開催 年間約200本の実績）。</span></div>
+      <div class="q"><b>Q. 何人から開催できる？</b><span>10名程度の少人数から100名規模まで対応できます。少人数のほうが対話型にでき、満足度は上がりやすいです。</span></div>
+      <div class="q"><b>Q. テーマは変えられる？</b><span>変えられます。福利厚生前面・経営者向け・新NISA入門など、団体の目的に合わせて構成します。</span></div>
+      <div class="q"><b>Q. 講師はどんな人？</b><span>fulfull株式会社 代表・森川満章。セミナー登壇 累計200回超・延べ6,500名超、商工会議所ビジネスお助け隊 役員／創業塾 役員。</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">7</span><h2>成果の記録と報告</h2></div>
+    <p>開催ごとに、共有スプレッドシート1枚に記録します（シートはfulfullが用意）。</p>
+    <ul class="check">
+      <li>申込数・参加数（会場／オンライン別）と参加率</li>
+      <li>アンケート回収数・満足度・参加者の声</li>
+      <li>個別相談：希望数 → 実施数 →（追跡）ご契約件数</li>
+      <li>当日の写真（掲載許可を取ったもの）</li>
+    </ul>
+    <p>この記録が団体への報告資料になり、<span class="hi">次の団体に提案するときの実績</span>にもなります。開催のたびに提案が強くなる仕組みです。</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">8</span><h2>fulfullが用意するもの・連絡先</h2></div>
+    <ul class="check">
+      <li>講師（森川）・スライド教材・当日の配信運営</li>
+      <li>チラシのデザイン〜印刷用データ（3案提示 → 確定まで）</li>
+      <li>申込フォーム・アンケート（紙＋QR）</li>
+      <li>成果記録シート（共有スプレッドシート）</li>
+      <li>団体向け企画書（Webページ・実績入り）</li>
+    </ul>
+    <div class="contact">
+      <p style="margin:0 0 6px"><strong>ご相談・案件のご連絡</strong></p>
+      <p style="margin:0;font-size:14px">fulfull株式会社 森川 満章（もりかわ みちあき）<br>
+      紹介用の企画書：<a href="https://mm738966m-boop.github.io/fulfull-ashigarakami-proposal/">mm738966m-boop.github.io/fulfull-ashigarakami-proposal/</a><br>
+      <span class="note">「この団体、合いそうかな？」という段階の雑談レベルでも大歓迎です。お気軽にどうぞ。</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>fulfull株式会社 ｜ 団体向けマネーセミナー 立ち上げマニュアル</footer>
+</body>
+</html>
