@@ -200,6 +200,21 @@
   .flyer .datebox .d1{font-size:5.6cqw}
   .flyer .badges{padding-top:2cqw}
   .flyer .foot{padding:2cqw 5cqw 3cqw}
+
+  /* pro flyer v3: 写真ヒーロー＋キャッチ重ね */
+  .flyer .hero{position:relative;height:46cqw;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:0 5cqw 4cqw;overflow:hidden;flex:0 0 auto}
+  .flyer .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 22%,var(--scrim) 100%)}
+  .flyer .hero .catch{position:relative;color:#fff;font-size:6.9cqw;padding:0;line-height:1.35;text-shadow:0 2px 14px rgba(0,0,0,.35);letter-spacing:.01em}
+  .flyer .hero .catch::before{content:"";display:block;width:9cqw;height:.75cqw;background:var(--accent);margin-bottom:2.2cqw}
+  .flyer .stitle{padding:3.2cqw 5cqw 0;font-size:3.15cqw;line-height:1.55}
+  .flyer .whofor{padding-top:2.6cqw}
+  .flyer .rounds3{padding-top:2.4cqw}
+  .flyer .datebox{margin-top:2.8cqw}
+  .fA{--scrim:rgba(6,44,39,.94);--accent:#c79a4b}
+  .fB{--scrim:rgba(9,24,50,.95);--accent:#e6c87a}
+  .fC{--scrim:rgba(70,38,16,.94);--accent:#f0b070}
+  .flyer .host{font-size:2.1cqw}
+  .flyer .lect img{border:.5cqw solid #fff;box-shadow:0 .6cqw 2cqw rgba(0,0,0,.18)}
 </style>
 </head>
 <body>
@@ -362,14 +377,13 @@
       <div class="flyer-item">
         <div class="flyer fA">
           <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
-          <div class="catch">社長が整えば、<br>会社が整う。</div>
+          <div class="hero" style="background-image:url('images/heroA.jpg')"><div class="catch">社長が整えば、<br>会社が整う。</div></div>
           <div class="stitle">社長のお金の勉強会 全3回 〜社長も守る。会社も、社員も、家族も守る。〜</div>
           <div class="whofor">
             <i>社長個人のお金と会社のお金が、混ざっている</i>
             <i>手元資金が何か月分あるか、即答できない</i>
             <i>自分に万一のとき、会社と家族がどうなるか考えたことがない</i>
           </div>
-          <div class="ph" style="background-image:url('images/flyerB.jpg')"></div>
           <div class="rounds3">
             <div><b>第1回 12/3（木）</b>社長自身を整える</div>
             <div><b>第2回 ◯/◯</b>会社を守る</div>
@@ -392,14 +406,13 @@
         <div class="flyer fB">
           <div class="band"></div>
           <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
-          <div class="catch">守る順番、<br>間違えていませんか？</div>
+          <div class="hero" style="background-image:url('images/heroB.jpg')"><div class="catch">守る順番、<br>間違えていませんか？</div></div>
           <div class="stitle">社長のお金の勉強会 全3回 〜社長も守る。会社も、社員も、家族も守る。〜</div>
           <div class="whofor">
             <i>会社のことは考えているが、自分のお金は後回し</i>
             <i>借入と保障の関係を、きちんと整理したことがない</i>
             <i>事業承継や退職金は「そのうち」と思っている</i>
           </div>
-          <div class="ph" style="background-image:url('images/flyerA.jpg')"></div>
           <div class="rounds3">
             <div><b>第1回 12/3（木）</b>社長自身を整える</div>
             <div><b>第2回 ◯/◯</b>会社を守る</div>
@@ -421,14 +434,13 @@
       <div class="flyer-item">
         <div class="flyer fC">
           <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
-          <div class="catch">社長のお金と会社のお金、<br>混ざっていませんか？</div>
+          <div class="hero" style="background-image:url('images/heroC.jpg')"><div class="catch">社長のお金と会社のお金、<br>混ざっていませんか？</div></div>
           <div class="stitle">社長のお金の勉強会 全3回 〜社長も守る。会社も、社員も、家族も守る。〜</div>
           <div class="whofor">
             <i>役員報酬の決め方、なんとなくで来ている</i>
             <i>社長の老後資金、会社とは別に考えていない</i>
             <i>社員や家族に「ちゃんと備えてる」と言い切れない</i>
           </div>
-          <div class="ph" style="background-image:url('images/flyerC.jpg')"></div>
           <div class="rounds3">
             <div><b>第1回 12/3（木）</b>社長自身を整える</div>
             <div><b>第2回 ◯/◯</b>会社を守る</div>
