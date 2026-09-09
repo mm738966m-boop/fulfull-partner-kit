@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="足柄上商工会「お金の勉強会」お打ち合わせ資料（fulfull株式会社）">
-<title>足柄上商工会「お金の勉強会」お打ち合わせ資料｜fulfull株式会社</title>
+<meta name="description" content="足柄上商工会「社長のお金の勉強会」全3回 チームMTG資料（fulfull株式会社）">
+<title>足柄上商工会「社長のお金の勉強会」チームMTG資料｜fulfull株式会社</title>
 <style>
   :root {
     --ground:#ffffff; --panel:#f4f8f6; --panel-2:#eef4f1;
@@ -156,19 +156,62 @@
     .scheme{grid-template-columns:1fr}
     .scheme .x{padding:2px 0}
   }
+
+  .rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+  .round{background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .round::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--teal),var(--teal-bright))}
+  .round .rn{font-size:11px;letter-spacing:.14em;font-weight:700;color:var(--teal);text-transform:uppercase}
+  .round h3{font-family:var(--serif);font-size:16.5px;font-weight:600;margin:4px 0 8px;line-height:1.45}
+  .round ul{margin:0;padding-left:18px;font-size:13px;color:var(--ink-soft)}
+  .round li{margin:3px 0}
+  .round .hw{margin-top:10px;background:var(--gold-wash);border-radius:9px;padding:8px 10px;font-size:12.5px;color:var(--ink)}
+  .round .hw b{color:var(--gold);font-size:11px;letter-spacing:.08em;display:block}
+  .pat{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+  .pat .p{border:1.5px solid var(--line);border-radius:14px;padding:18px 18px 16px;background:var(--ground)}
+  .pat .p.rec{border-color:var(--teal)}
+  .pat .p .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;border-radius:99px;padding:3px 10px;background:var(--teal-wash);color:var(--teal-deep)}
+  .pat .p h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:8px 0 6px}
+  .pat .p .dl{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+  .pat .p .dl span{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:13px;font-weight:700}
+  .pat .p .good,.pat .p .care{font-size:13px;margin:0;padding-left:18px;color:var(--ink-soft)}
+  .pat .p .lab{font-size:11px;font-weight:700;letter-spacing:.08em;margin:8px 0 2px}
+  .pat .p .lab.g{color:var(--teal)} .pat .p .lab.c{color:var(--gold)}
+  .fixed{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+  .fixed .f{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px 14px;font-size:13.5px}
+  .fixed .f .ok{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:3px}
+  .fixed .f b{display:block}
+  .fixed .f span{font-size:12.5px;color:var(--ink-soft)}
+  .quote{border-left:3px solid var(--gold);background:var(--gold-wash);padding:12px 16px;border-radius:0 10px 10px 0;font-size:13.5px;color:var(--ink);margin:12px 0}
+  .flyer .rounds3{display:flex;gap:1.6cqw;padding:2.6cqw 5cqw 0}
+  .flyer .rounds3 div{flex:1;border-radius:1.6cqw;padding:1.6cqw 2cqw;font-size:2.4cqw;line-height:1.45}
+  .flyer .rounds3 b{display:block;font-size:2.8cqw}
+  .fA .rounds3 div{background:#e4f1ee;color:#0a5a50}
+  .fB .rounds3 div{background:#e8edf5;color:#122a4c}
+  .fC .rounds3 div{background:#fdeeda;color:#b05a24}
+  @media (max-width:680px){.rounds,.pat,.fixed{grid-template-columns:1fr}}
+
+  /* 社長版：3回日程行を入れた分の詰め */
+  .flyer .catch{font-size:6.6cqw;padding-top:3.8cqw}
+  .flyer .stitle{font-size:3.1cqw;padding-top:1.8cqw}
+  .flyer .whofor{font-size:2.95cqw;gap:.9cqw;padding-top:2.4cqw}
+  .flyer .ph{min-height:16cqw;margin-top:2.8cqw}
+  .flyer .rounds3{padding-top:2.2cqw}
+  .flyer .datebox{margin-top:2.6cqw;padding:2.2cqw 4cqw}
+  .flyer .datebox .d1{font-size:5.6cqw}
+  .flyer .badges{padding-top:2cqw}
+  .flyer .foot{padding:2cqw 5cqw 3cqw}
 </style>
 </head>
 <body>
-
 <header class="cover">
   <div class="wrap">
     <span class="tag">チームMTG資料</span>
-    <h1>足柄上商工会「お金の勉強会」<br>12月開催に向けた作戦会議</h1>
-    <p class="sub">井上さん・滑川さんのおかげで、12月開催に向けて大きく前進しました。決めることをこの1枚に整理したので、上から順にサクッと決めていけたらと思います。</p>
+    <h1>足柄上商工会「社長のお金の勉強会」<br>全3回への進化案</h1>
+    <p class="sub">商工会からの回答（経営者向けOK・3日程すべてOK・個別相談の導線もOK）を受けて、内容を「社長のお金の勉強会・全3回」に進化させたいと思います。今日はチラシの中身と日程パターンを一緒に決めましょう。</p>
     <div class="meta">
       <span>fulfull株式会社 森川 満章</span>
-      <span>12月初旬 開催予定</span>
-      <span>会員企業の経営者様・従業員様向け</span>
+      <span>第1回 12/3（木）を軸に</span>
+      <span>対象：会員企業の経営者</span>
     </div>
   </div>
 </header>
@@ -178,282 +221,320 @@
   <section>
     <div class="sec-head"><span class="sec-num">0</span><h2>今日決めたいこと（アジェンダ）</h2></div>
     <div class="agenda">
-      <div class="a"><span class="n">1</span><div><b>当日の商工会さんの反応・肌感</b><span>訪問したお二人から、ぜひ共有を</span></div></div>
-      <div class="a"><span class="n">2</span><div><b>日程の候補</b><span>こちらの調整可能日をお持ちしました</span></div></div>
-      <div class="a"><span class="n">3</span><div><b>開催方法（対面×オンライン併用）</b><span>当日の運営分担のご相談</span></div></div>
-      <div class="a"><span class="n">4</span><div><b>講座の中身・見せ方</b><span>福利厚生前面の構成案</span></div></div>
-      <div class="a"><span class="n">5</span><div><b>チラシのデザイン</b><span>3案つくりました＋タイトル候補</span></div></div>
-      <div class="a"><span class="n">6</span><div><b>セミナー後の個別相談の流れ</b><span>リードの受け方・フォロー分担</span></div></div>
+      <div class="a"><span class="n">1</span><div><b>商工会からの回答の整理</b><span>決まったこと・動ける前提の確認</span></div></div>
+      <div class="a"><span class="n">2</span><div><b>「社長のお金の勉強会・全3回」の提案</b><span>コンセプトと3回の構成</span></div></div>
+      <div class="a"><span class="n">3</span><div><b>開催日：2パターンから選ぶ</b><span>12月集中型 or 月1型</span></div></div>
+      <div class="a"><span class="n">4</span><div><b>個別相談の募り方</b><span>津田事務局長の懸念への答え</span></div></div>
+      <div class="a"><span class="n">5</span><div><b>チラシの中身を確定</b><span>社長版デザイン3案＋タイトル</span></div></div>
+      <div class="a"><span class="n">6</span><div><b>ハイブリッドの運営・Zoomホスト</b><span>分担と接続リハ</span></div></div>
       <div class="a"><span class="n">7</span><div><b>費用・お金の流れの整理</b><span>すっきりさせておきたい3点</span></div></div>
-      <div class="a"><span class="n">8</span><div><b>成果の記録方法</b><span>次につなげるための1枚シート</span></div></div>
+      <div class="a"><span class="n">8</span><div><b>成果の記録</b><span>次につなげる1枚シート</span></div></div>
     </div>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">1</span><h2>当日の商工会さんの反応・肌感</h2></div>
-    <p>訪問したときの空気感を共有してもらえると、講座づくりの精度がぐっと上がります。</p>
+    <div class="sec-head"><span class="sec-num">1</span><h2>商工会からの回答（整理）</h2></div>
+    <p>井上さん・滑川さん、事務局長への確認ありがとうございました。前提がほぼ固まりました。</p>
+    <div class="fixed">
+      <div class="f"><span class="ok">✓</span><div><b>対象：経営者向けで実施可</b><span>→ 内容を「社長のお金」に振り切れる</span></div></div>
+      <div class="f"><span class="ok">✓</span><div><b>日程：12/3・12/8・12/11 すべて可</b><span>→ 3回建ての選択肢が生まれた</span></div></div>
+      <div class="f"><span class="ok">✓</span><div><b>時間：90分程度</b><span>→ 各回90分で設計</span></div></div>
+      <div class="f"><span class="ok">✓</span><div><b>ハイブリッド：事務局長の希望</b><span>→ 前提として運営を組む</span></div></div>
+      <div class="f"><span class="ok">✓</span><div><b>個別相談の告知・声かけOK、管理はfulfull</b><span>→ 相談導線を堂々と設計できる</span></div></div>
+      <div class="f"><span class="ok">✓</span><div><b>アクサさんとの摩擦なし</b><span>→ チラシ配布・声かけとも問題なし</span></div></div>
+    </div>
+    <div class="quote">津田事務局長：「経験上、セミナー後に講師と話をしようと残る人は数名で、前の人の話が長いと帰ってしまう。アンケートで収集しても確率は低いでしょう。」<br><span class="note">→ この懸念にきちんと答えるのが、今回の設計の肝です（4章）。</span></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">2</span><h2>提案：「社長のお金の勉強会」全3回</h2></div>
+    <p class="quote" style="font-family:var(--serif);font-size:16px">社長も守る。会社も、社員も、家族も守る。<br>——ただ、社長自身が整っていなければ、どれも守れない。</p>
+    <p>対象が経営者になったので、テーマを「福利厚生」から<span class="hi">「社長のお金の守る順番」</span>に切り替えます。社長個人のお金と会社のお金を分けて整えるところから始めて、会社、社員と家族へと守る範囲を広げていく3回構成です。</p>
+    <p>単発でなく3回にする理由は、学びの定着だけではありません。<strong>関係が3回積み上がり、締切が3つでき、「宿題」という自然な口実が生まれる</strong>ので、個別相談への流れが無理なくつくれます。</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">3</span><h2>3回の構成（各90分）</h2></div>
+    <div class="rounds">
+      <div class="round">
+        <div class="rn">第1回</div>
+        <h3>社長自身を整える</h3>
+        <ul>
+          <li>社長のお金と会社のお金、混ざっていませんか？</li>
+          <li>役員報酬と個人資産の整理の考え方</li>
+          <li>社長の老後は誰も守ってくれない：小規模企業共済・iDeCo・NISAの社長版の使い分け</li>
+        </ul>
+        <div class="hw"><b>持ち帰る数字（宿題）</b>手元資金は、何か月分ある？</div>
+      </div>
+      <div class="round">
+        <div class="rn">第2回</div>
+        <h3>会社を守る</h3>
+        <ul>
+          <li>社長に万一があったら、会社はどうなる？</li>
+          <li>借入と保障の関係、資金繰りの守り方</li>
+          <li>事業承継の「入口」だけ整理する</li>
+        </ul>
+        <div class="hw"><b>持ち帰る数字（宿題）</b>万一のとき、会社と家族に足りない額は？</div>
+      </div>
+      <div class="round">
+        <div class="rn">第3回</div>
+        <h3>社員と家族を守る</h3>
+        <ul>
+          <li>社員が辞めない会社のお金の仕組み（退職金・企業型DCの入口）</li>
+          <li>家族への引き継ぎ（相続の入口）</li>
+          <li>社員向けの「お金の教育」を福利厚生に</li>
+        </ul>
+        <div class="hw"><b>持ち帰る数字（宿題）</b>引退までに必要な額と、今の差は？</div>
+      </div>
+    </div>
+    <p class="note">※ 各回は単独でも完結する作りにします（途中参加OK）。第3回は自然に「社員向け勉強会」の提案につながるので、来年度の展開の種にもなります。</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">4</span><h2>開催日：2パターン</h2></div>
+    <p>商工会が出してくれた3日程がすべて使えるので、2つの組み方を提案します。どちらも第1回は<strong>12/3（木）</strong>です。</p>
+    <div class="pat">
+      <div class="p rec">
+        <span class="tag">パターン①</span>
+        <h3>12月集中型</h3>
+        <div class="dl"><span>第1回 12/3（木）</span><span>第2回 12/8（火）</span><span>第3回 12/11（金）</span></div>
+        <div class="lab g">良い点</div>
+        <ul class="good">
+          <li>商工会がOKした日程をそのまま使える＝調整ゼロで即確定</li>
+          <li>2週間で関係が一気に深まる。熱が冷めない</li>
+          <li>1〜3月をまるごと個別相談・お手続きに充てられる</li>
+        </ul>
+        <div class="lab c">気をつける点</div>
+        <ul class="care">
+          <li>12月の忙しい時期に3回。参加者の負担は大きめ</li>
+          <li>宿題を計算する時間が短い（→ 個別相談で一緒に計算、が生きる）</li>
+        </ul>
+      </div>
+      <div class="p">
+        <span class="tag">パターン②</span>
+        <h3>月1型</h3>
+        <div class="dl"><span>第1回 12/3（木）</span><span>第2回 1月中旬</span><span>第3回 2月上旬</span></div>
+        <div class="lab g">良い点</div>
+        <ul class="good">
+          <li>宿題を実践する時間があり、行動が変わりやすい</li>
+          <li>回ごとに告知でき、途中参加を拾える</li>
+          <li>年度内に3回、3月に相談が集中</li>
+        </ul>
+        <div class="lab c">気をつける点</div>
+        <ul class="care">
+          <li>1・2月の日程を商工会と新たに調整</li>
+          <li>間が空くと熱が冷める。リマインドが必須</li>
+          <li>3月に相談が集中し、年度内のお手続きが詰まる</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">※ 商工会は「1回」のつもりのはずなので、「第1回は12/3で確定。第2・3回はどちらのパターンがやりやすいか」の聞き方で出すと通りやすいです。</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">5</span><h2>個別相談の募り方（津田さんの懸念への答え）</h2></div>
+    <p>「終わってから講師に話しかける」方式はやめます。残らせない・並ばせない・その場で予約が入る設計にします。</p>
+    <div class="flow">
+      <div class="fstep"><div class="dot">1</div><div class="t">宿題シート</div><div class="d">各回の最後に配布。自分の数字を1つ書く</div></div>
+      <div class="fstep"><div class="dot">2</div><div class="t">3択アンケート</div><div class="d">満足度でなく「今いちばん気になる数字は？」</div></div>
+      <div class="fstep"><div class="dot">3</div><div class="t">その場でQR予約</div><div class="d">スマホ30秒で30分の計算枠を予約</div></div>
+      <div class="fstep"><div class="dot">4</div><div class="t">個別30分</div><div class="d">宿題の答え合わせ＝一緒に計算</div></div>
+      <div class="fstep"><div class="dot">5</div><div class="t">全体設計シート</div><div class="d">3回参加特典として個別に作成</div></div>
+    </div>
     <div class="ask">
-      <div class="k">聞きたいこと</div>
+      <div class="k">この設計のポイント</div>
       <ul>
-        <li>津田事務局長はじめ、商工会さんが一番期待していそうなことは？（従業員支援？ 会員サービスの目玉？）</li>
-        <li>参加者のイメージ（年齢層・経営者と従業員の比率・人数の肌感）</li>
-        <li>逆に「これはやめてほしい」と感じられそうなこと（営業色・商品の話など）</li>
-        <li>商工会さん側で気にされていた点・宿題になっている点</li>
+        <li><strong>宿題シート方式</strong>：数字を出すには計算が要るので、「計算は個別30分で一緒にやります」が自然な案内になる</li>
+        <li><strong>その場でQR予約</strong>：残って並ばせない。受付には大木さん・井上さんに立ってもらえると「顔の見える窓口」になる</li>
+        <li><strong>3回参加特典</strong>：「社長のお金の全体設計シート」を個別で作成。連続参加の理由と相談化を兼ねる</li>
+        <li><strong>3択アンケート</strong>：相談テーマを拾い、次回の冒頭で全体に返す（回収率も上がる）</li>
       </ul>
     </div>
+    <p>津田さんの経験則は「単発セミナー」の話です。3回建てそのものが、いちばんの募り方になります。</p>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">2</span><h2>日程の候補</h2></div>
-    <p>12月初旬・平日の夕方以降で、森川の調整可能日です。津田事務局長への候補日連絡に、そのまま使ってください。</p>
-    <div class="dates">
-      <div class="date">12/3（木）<small>18時以降OK</small></div>
-      <div class="date">12/8（火）<small>18時以降OK</small></div>
-      <div class="date">12/11（金）<small>18時以降OK</small></div>
-    </div>
-    <p class="note">初旬が難しい場合の予備日：</p>
-    <div class="dates">
-      <div class="date sub">12/15（火）<small>夜OK</small></div>
-      <div class="date sub">12/17（木）<small>夜OK</small></div>
-      <div class="date sub">12/18（金）<small>夜OK</small></div>
-    </div>
-    <p class="note">※ 12/1・2・7（商工会さんNG日）は外しています。12/4〜6はこちらの都合がつかず外しています。<br>※ 時間帯は従業員の方が参加しやすい 18:30〜20:00（90分）を目安に考えていますが、ご希望に合わせます。</p>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="sec-num">3</span><h2>開催方法：対面×オンライン併用について</h2></div>
-    <p>ハイブリッド開催、<span class="hi">対応できます</span>。オンラインセミナーは年間200本ほど開催しているので、必要であれば配信・Zoom運営ごとこちらで巻き取ることもできます。</p>
-    <p>そのうえで、<strong>Zoomのホストをどちらが持つか</strong>と、<strong>当日の会場側の人手</strong>の2点を、この場で決めたいです。</p>
-    <div class="tbl-scroll">
-      <table>
-        <tr><th>役割</th><th>内容</th><th>担当（案）</th></tr>
-        <tr><td>講義・進行</td><td>登壇、スライド、質疑</td><td>fulfull（森川）</td></tr>
-        <tr><td>配信まわり</td><td>Zoom設定・URL発行・録画・オンライン質疑の拾い上げ</td><td><span class="hi">要相談</span>（Zoomホストの持ち方 → 下の比較表）</td></tr>
-        <tr><td>会場受付</td><td>受付名簿・アンケート配布回収</td><td>東京海上さん or 商工会さん</td></tr>
-        <tr><td>会場設営</td><td>プロジェクター・スクリーン・ネット回線の確認</td><td>東京海上さん or 商工会さん（＋事前にこちらで下見も可）</td></tr>
-        <tr><td>オンライン申込管理</td><td>申込フォームの窓口・参加URL案内</td><td><span class="hi">要相談</span></td></tr>
-      </table>
-    </div>
-
-    <h3 style="font-family:var(--serif);font-size:17px;font-weight:600;margin:28px 0 6px">Zoomのホスト（設定・URL発行・録画）をどちらが持つか</h3>
-    <p style="font-size:14px">名義が「東京海上日動×足柄上商工会」なので、東京海上さんのZoomで開催する形が自然です。一方で、企業アカウントはセキュリティ設定が強く、<strong>チャット・録画・外部の共同ホストに制限がかかる場合</strong>があります。双方向のやり取りが満足度の生命線なので、判断材料を並べました。</p>
-    <div class="tbl-scroll">
-      <table>
-        <tr><th></th><th>東京海上さんのZoomで開催</th><th>fulfullのZoomで開催</th></tr>
-        <tr>
-          <td>良い点</td>
-          <td>主催名義とホストが一致し、参加者から見て自然・安心。社内手続きもシンプル</td>
-          <td>チャット・Q&amp;A・録画を自由に設計でき、双方向の質を担保しやすい。申込→リマインド→アンケートまで一気通貫。録画を記録・改善に使える</td>
-        </tr>
-        <tr>
-          <td>気になる点</td>
-          <td>セキュリティ設定でチャット無効・録画制限・外部共同ホスト不可の可能性 → 事前確認が必要。当日設定を変更できる方が現場に必要</td>
-          <td>名義とホストが異なる点の社内整理が必要。参加者情報（メール等）の取り扱いを事前に取り決める必要</td>
-        </tr>
-      </table>
-    </div>
-    <p style="font-size:14px"><span class="hi">どちらで開催する場合も</span>、本番の1〜2週間前に接続リハーサルを1回入れて、<strong>①チャット可否 ②画面共有 ③録画</strong> の3点を実機確認しましょう（リハの段取りはこちらでやります）。</p>
-
-    <div class="ask">
-      <div class="k">確認したいこと</div>
-      <ul>
-        <li><strong>Zoomのホストをどちらが持つか</strong>（上の比較表をもとに。東京海上さんの社内設定の制限もあわせて確認）</li>
-        <li>会場（商工会館 等）のネット回線・機材の状況（事前下見が可能か）</li>
-        <li>当日の受付・案内の人員（東京海上さん・商工会さんの分担）</li>
-        <li>オンライン参加の申込窓口をどこに置くか</li>
-        <li>本番前の接続リハーサルの日程</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="sec-num">4</span><h2>講座の中身（たたき台）</h2></div>
-    <p>「お金の増やし方」を前面に出さず、<span class="hi">福利厚生・従業員の安心</span>の文脈で組み立てます。中身はNISA・iDeCoなどの通常内容で、商品の話はしません。90分・双方向（声出し・挙手あり）の想定です。</p>
-    <div class="tbl-scroll">
-      <table>
-        <tr><th>時間</th><th>内容</th></tr>
-        <tr><td>5分</td><td>オープニング・アイスブレイク（会場とオンライン両方に声かけ）</td></tr>
-        <tr><td>15分</td><td>人生100年時代のお金の現実 —「なんとなく不安」の正体を知る</td></tr>
-        <tr><td>15分</td><td>お金の3つの力：貯める・守る・そなえる</td></tr>
-        <tr><td>20分</td><td>新NISA・iDeCoのきほん — 制度をやさしく仕分け</td></tr>
-        <tr><td>15分</td><td>毎月の固定費の見直しポイント — 明日からできる家計の整え方</td></tr>
-        <tr><td>15分</td><td>質疑応答・ミニワーク（グループで一言シェア）</td></tr>
-        <tr><td>5分</td><td>アンケート記入・個別相談のご案内</td></tr>
-      </table>
-    </div>
-    <p class="note">※ 構成は商工会さんのご要望に合わせて柔軟に変えられます。すり合わせの場でご意見ください。</p>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="sec-num">5</span><h2>チラシデザイン 3案</h2></div>
-    <p>福利厚生を前面にした3方向でご用意しました。この場で方向性を決めてもらえれば、日程が入り次第すぐ印刷用データまで仕上げます（9月半ばの郵送に間に合わせます）。</p>
+    <div class="sec-head"><span class="sec-num">6</span><h2>チラシデザイン 3案（社長版）</h2></div>
+    <p>経営者向けに作り直しました。3案ともキャッチコピーの切り口が違います。方向が決まれば、日程パターンに合わせてすぐ印刷用データまで仕上げます。</p>
     <div class="flyer-stack">
 
       <div class="flyer-item">
         <div class="flyer fA">
           <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
-          <div class="catch">その貯金だけで、<br>この先も安心ですか？</div>
-          <div class="stitle">従業員の“お金の安心”をつくる 福利厚生セミナー</div>
+          <div class="catch">社長が整えば、<br>会社が整う。</div>
+          <div class="stitle">社長のお金の勉強会 全3回 〜社長も守る。会社も、社員も、家族も守る。〜</div>
           <div class="whofor">
-            <i>貯金はあるけど、このままでいいのか不安</i>
-            <i>新NISA・iDeCo、結局なにから始めれば？</i>
-            <i>教育費や老後のお金が、なんとなくモヤモヤする</i>
+            <i>社長個人のお金と会社のお金が、混ざっている</i>
+            <i>手元資金が何か月分あるか、即答できない</i>
+            <i>自分に万一のとき、会社と家族がどうなるか考えたことがない</i>
           </div>
-          <div class="ph" style="background-image:url('images/flyerA.jpg')"></div>
+          <div class="ph" style="background-image:url('images/flyerB.jpg')"></div>
+          <div class="rounds3">
+            <div><b>第1回 12/3（木）</b>社長自身を整える</div>
+            <div><b>第2回 ◯/◯</b>会社を守る</div>
+            <div><b>第3回 ◯/◯</b>社員と家族を守る</div>
+          </div>
           <div class="datebox">
-            <div class="d1">12/◯<small>（◯曜日）</small></div>
-            <div class="d2">18:30〜20:00（開場18:15）<br>商工会館 ほか＋オンライン同時開催</div>
+            <div class="d1">18:30<small>〜20:00</small></div>
+            <div class="d2">商工会館 ほか＋オンライン同時開催<br>1回だけの参加もOK</div>
           </div>
-          <div class="badges"><i>売り込みなし</i><i>知識ゼロOK</i><i>途中入退室自由</i></div>
+          <div class="badges"><i>経営者限定</i><i>売り込みなし</i><i>全3回・途中参加OK</i></div>
           <div class="foot">
-            <div class="lect"><img src="images/lecturer.jpg" alt="講師 森川満章"><span>講師：森川 満章<br>延べ6,500名超が受講</span></div>
+            <div class="lect"><img src="images/lecturer.jpg" alt="講師 森川満章"><span>講師：森川 満章<br>商工会議所 創業塾 役員</span></div>
             <div class="apply"><span>スマホで10秒<br>かんたん申込 →</span><span class="qr"></span></div>
           </div>
         </div>
-        <div class="flyer-label">A案：安心・やさしい<small>ティール基調。「不安への問いかけ」で自分ごと化 → 福利厚生で受け止める構成</small></div>
+        <div class="flyer-label">A案：安心・整える<small>ティール基調。「社長が整えば」の一言で順番論を伝える</small></div>
       </div>
 
       <div class="flyer-item">
         <div class="flyer fB">
           <div class="band"></div>
           <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
-          <div class="catch">“お金の備え”は、<br>会社で学ぶ時代へ。</div>
-          <div class="stitle">人生100年時代の「お金の備え方」講座 〜企業の福利厚生として〜</div>
+          <div class="catch">守る順番、<br>間違えていませんか？</div>
+          <div class="stitle">社長のお金の勉強会 全3回 〜社長も守る。会社も、社員も、家族も守る。〜</div>
           <div class="whofor">
-            <i>新NISA・iDeCoを基礎から正しく知りたい</i>
-            <i>老後資金の考え方を一度整理したい</i>
-            <i>従業員の学びの機会をつくりたい経営者の方</i>
+            <i>会社のことは考えているが、自分のお金は後回し</i>
+            <i>借入と保障の関係を、きちんと整理したことがない</i>
+            <i>事業承継や退職金は「そのうち」と思っている</i>
           </div>
-          <div class="ph" style="background-image:url('images/flyerB.jpg')"></div>
+          <div class="ph" style="background-image:url('images/flyerA.jpg')"></div>
+          <div class="rounds3">
+            <div><b>第1回 12/3（木）</b>社長自身を整える</div>
+            <div><b>第2回 ◯/◯</b>会社を守る</div>
+            <div><b>第3回 ◯/◯</b>社員と家族を守る</div>
+          </div>
           <div class="datebox">
-            <div class="d1">12/◯<small>（◯曜日）</small></div>
-            <div class="d2">18:30〜20:00（開場18:15）<br>商工会館 ほか＋オンライン同時開催</div>
+            <div class="d1">18:30<small>〜20:00</small></div>
+            <div class="d2">商工会館 ほか＋オンライン同時開催<br>1回だけの参加もOK</div>
           </div>
-          <div class="badges"><i>経営者・従業員向け</i><i>登壇実績 200回超</i><i>質問タイムあり</i></div>
+          <div class="badges"><i>経営者限定</i><i>登壇実績 200回超</i><i>質問タイムあり</i></div>
           <div class="foot">
             <div class="lect"><img src="images/lecturer.jpg" alt="講師 森川満章"><span>講師：森川 満章<br>商工会議所 創業塾 役員</span></div>
             <div class="apply"><span>お申し込みは<br>こちらから →</span><span class="qr"></span></div>
           </div>
         </div>
-        <div class="flyer-label">B案：信頼・フォーマル<small>ネイビー×ゴールド。東京海上日動さんのトーンと親和。実績数字で信頼を担保</small></div>
+        <div class="flyer-label">B案：信頼・フォーマル<small>ネイビー×ゴールド。東京海上日動さんのトーンと親和。問いかけで自分ごと化</small></div>
       </div>
 
       <div class="flyer-item">
         <div class="flyer fC">
           <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="fr">参加無料</span></div>
-          <div class="catch">お金の話、<br>家族でできていますか？</div>
-          <div class="stitle">家族で学べる「お金の安心教室」〜働くみなさんの福利厚生企画〜</div>
+          <div class="catch">社長のお金と会社のお金、<br>混ざっていませんか？</div>
+          <div class="stitle">社長のお金の勉強会 全3回 〜社長も守る。会社も、社員も、家族も守る。〜</div>
           <div class="whofor">
-            <i>むずかしい言葉ゼロで、基礎から学びたい</i>
-            <i>その日から使えるコツを持ち帰りたい</i>
-            <i>子どもの教育費、そろそろちゃんと考えたい</i>
+            <i>役員報酬の決め方、なんとなくで来ている</i>
+            <i>社長の老後資金、会社とは別に考えていない</i>
+            <i>社員や家族に「ちゃんと備えてる」と言い切れない</i>
           </div>
           <div class="ph" style="background-image:url('images/flyerC.jpg')"></div>
-          <div class="datebox">
-            <div class="d1">12/◯<small>（◯曜日）</small></div>
-            <div class="d2">18:30〜20:00（開場18:15）<br>商工会館 ほか＋オンライン同時開催</div>
+          <div class="rounds3">
+            <div><b>第1回 12/3（木）</b>社長自身を整える</div>
+            <div><b>第2回 ◯/◯</b>会社を守る</div>
+            <div><b>第3回 ◯/◯</b>社員と家族を守る</div>
           </div>
-          <div class="badges"><i>ご家族での参加歓迎</i><i>オンラインOK</i><i>売り込みなし</i></div>
+          <div class="datebox">
+            <div class="d1">18:30<small>〜20:00</small></div>
+            <div class="d2">商工会館 ほか＋オンライン同時開催<br>1回だけの参加もOK</div>
+          </div>
+          <div class="badges"><i>経営者限定</i><i>売り込みなし</i><i>オンラインOK</i></div>
           <div class="foot">
             <div class="lect"><img src="images/lecturer.jpg" alt="講師 森川満章"><span>講師：森川 満章<br>Voicy「ふるふるラジオ」配信中</span></div>
             <div class="apply"><span>スマホで10秒<br>かんたん申込 →</span><span class="qr"></span></div>
           </div>
         </div>
-        <div class="flyer-label">C案：地元・フランク<small>暖色基調。「家族の会話」への問いかけ。地域の集まり感覚で参加できるトーン</small></div>
+        <div class="flyer-label">C案：地元・率直<small>暖色基調。いちばん具体的な問いで、社長の「ドキッ」を狙う</small></div>
       </div>
 
     </div>
-    <p class="note">※ 主催・共催の表記、講師の肩書きの出し方（会社名を出すか等）も、この場で決めてしまいましょう。</p>
+    <p class="note">※ 第2回・第3回の日付は、日程パターンが決まり次第入れます。主催・共催の表記、講師の肩書きの出し方も、この場で決めてしまいましょう。<br>※ 経営者向けなら昼間の開催も選べるので、時間帯（18:30 or 昼）も一緒に決めたいです。</p>
 
-    <h3 style="font-family:var(--serif);font-size:18px;font-weight:600;margin:32px 0 4px">タイトル候補（ほかにもこんな切り口があります）</h3>
+    <h3 style="font-family:var(--serif);font-size:18px;font-weight:600;margin:32px 0 4px">タイトル候補（キャッチの別案）</h3>
     <ul class="titles">
-      <li>会社では教えてくれない、お金の基礎講座<small>「知らないままだった」に応える定番の切り口</small></li>
-      <li>給料日がもっと楽しみになる、お金の整え方セミナー<small>従業員目線・前向きなトーン</small></li>
-      <li>従業員とご家族のための 安心マネー講座<small>福利厚生の文脈をそのままタイトルに</small></li>
-      <li>“貯める・守る・そなえる” はじめてのお金の勉強会<small>講座の中身（3つの力）と直結</small></li>
-      <li>60分でわかる！新NISA・iDeCo超入門<small>具体的な学びを前面に。時間を区切って参加ハードルを下げる</small></li>
+      <li>社長も守る。会社も、社員も、家族も守る。<small>本命。守る範囲が広がる順番をそのまま言葉に</small></li>
+      <li>社長が整えば、会社が整う。<small>A案のキャッチ。短くて覚えやすい</small></li>
+      <li>守る順番、間違えていませんか？<small>B案のキャッチ。問いかけ型</small></li>
+      <li>社長のお金と会社のお金、混ざっていませんか？<small>C案のキャッチ。いちばん具体的で「ドキッ」とする</small></li>
+      <li>会社を守る前に、社長を守る。<small>順番論を一文で。硬めのトーンにも合う</small></li>
+      <li>社長の「お金の3つの守り」<small>3回構成がそのまま伝わる。連続講座感を出したいとき</small></li>
     </ul>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">6</span><h2>セミナー後の個別相談の流れ（ご相談）</h2></div>
-    <p>せっかく開催するので、参加者の方が「聞きたいことを聞ける場」まで用意しておきたいです。当日の流れの案と、<span class="hi">事前に決めておきたい3点</span>です。</p>
-    <div class="flow">
-      <div class="fstep"><div class="dot">1</div><div class="t">当日アンケート</div><div class="d">紙＋QRで回収。「個別相談を希望する」欄を設置</div></div>
-      <div class="fstep"><div class="dot">2</div><div class="t">希望者リスト化</div><div class="d">当日中にリスト化</div><span class="q">確認① 共有先</span></div>
-      <div class="fstep"><div class="dot">3</div><div class="t">日程調整</div><div class="d">1週間以内にご連絡</div><span class="q">確認② 窓口</span></div>
-      <div class="fstep"><div class="dot">4</div><div class="t">個別相談 実施</div><div class="d">オンライン30分〜</div><span class="q">確認③ 体制</span></div>
-      <div class="fstep"><div class="dot">5</div><div class="t">記録</div><div class="d">相談件数・内容を記録シートへ</div></div>
+    <div class="sec-head"><span class="sec-num">7</span><h2>ハイブリッドの運営とZoomホスト</h2></div>
+    <p>ハイブリッドは事務局長の希望なので、前提として組みます。オンライン開催は年間200本ほどやっているので、必要なら配信・Zoom運営ごとこちらで巻き取れます。</p>
+    <div class="tbl-scroll">
+      <table>
+        <tr><th>役割</th><th>内容</th><th>担当（案）</th></tr>
+        <tr><td>講義・進行</td><td>登壇、スライド、質疑、宿題シート</td><td>fulfull（森川）</td></tr>
+        <tr><td>配信まわり</td><td>Zoom設定・URL発行・録画・オンライン質疑の拾い上げ</td><td><span class="hi">要相談</span>（下の比較表）</td></tr>
+        <tr><td>会場受付・相談予約の受付</td><td>受付名簿・アンケート回収・QR予約の案内</td><td>東京海上さん or 商工会さん</td></tr>
+        <tr><td>会場設営</td><td>プロジェクター・スクリーン・ネット回線の確認</td><td>東京海上さん or 商工会さん（＋事前にこちらで下見も可）</td></tr>
+        <tr><td>オンライン申込管理</td><td>申込フォームの窓口・参加URL案内</td><td><span class="hi">要相談</span></td></tr>
+      </table>
     </div>
-    <div class="ask">
-      <div class="k">事前に決めておきたい3点</div>
-      <ul>
-        <li><strong>確認①</strong> アンケート・相談希望リストは誰が回収し、どこに共有するか</li>
-        <li><strong>確認②</strong> 相談の日程調整の窓口はどこに置くか（商工会経由？ 東京海上さん？ fulfull直？）</li>
-        <li><strong>確認③</strong> 相談の体制（fulfull単独か、東京海上さん・KHCさん同席か。テーマによる振り分けも可）</li>
-      </ul>
+    <h3 style="font-family:var(--serif);font-size:17px;font-weight:600;margin:24px 0 6px">Zoomのホストをどちらが持つか</h3>
+    <div class="tbl-scroll">
+      <table>
+        <tr><th></th><th>東京海上さんのZoomで開催</th><th>fulfullのZoomで開催</th></tr>
+        <tr><td>良い点</td><td>主催名義とホストが一致し、参加者から見て自然。社内手続きもシンプル</td><td>チャット・Q&amp;A・録画を自由に設計でき、双方向の質を担保しやすい。申込→リマインド→アンケートまで一気通貫</td></tr>
+        <tr><td>気になる点</td><td>セキュリティ設定でチャット無効・録画制限・外部共同ホスト不可の可能性 → 事前確認が必要</td><td>名義とホストが異なる点の社内整理。参加者情報の取り扱いを事前に取り決める</td></tr>
+      </table>
     </div>
+    <p style="font-size:14px"><span class="hi">どちらの場合も</span>、本番の1〜2週間前に接続リハーサルを1回入れて、①チャット可否 ②画面共有 ③録画 の3点を実機確認しましょう（リハの段取りはこちらでやります）。</p>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">7</span><h2>費用・お金の流れの整理</h2></div>
+    <div class="sec-head"><span class="sec-num">8</span><h2>費用・お金の流れの整理</h2></div>
     <p>あとで曖昧にならないよう、3点だけすっきりさせておきたいです。</p>
     <div class="tbl-scroll">
       <table>
         <tr><th>項目</th><th>こちらの理解（たたき台）</th><th>確認したいこと</th></tr>
-        <tr><td>商工会さん側の費用</td><td>参加無料・商工会さんの費用負担なしで開催</td><td>この前提で確定してよいか</td></tr>
-        <tr><td>登壇・制作の費用</td><td>今回はモデルケースとして、登壇・チラシ制作はfulfullで対応する想定</td><td>費用の取り扱いの整理（無償前提か、予算の有無）</td></tr>
-        <tr><td>個別相談から先</td><td>相談のなかでご契約につながるケースが出てくる想定</td><td>お手続き・計上の窓口と分担をどう整理するか</td></tr>
+        <tr><td>商工会さん側の費用</td><td>参加無料・商工会さんの費用負担なしで開催</td><td>3回になっても同じ前提でよいか</td></tr>
+        <tr><td>登壇・制作の費用</td><td>モデルケースとして、登壇・チラシデザインはfulfullで対応する想定</td><td>費用の取り扱いの整理（無償前提か、予算の有無）</td></tr>
+        <tr><td>個別相談から先</td><td>相談のなかでお手続きにつながるケースが出てくる想定</td><td>お手続き・計上の窓口と分担をどう整理するか</td></tr>
       </table>
     </div>
     <p class="note">※ 実費（印刷・郵送など）の負担元も、あわせて確認できたらと思います。</p>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">8</span><h2>成果の記録（次につなげるために）</h2></div>
-    <p>今回を単発で終わらせず「次も開催したい」と言っていただくために、数字を1枚のシートに残しておきます。共有のスプレッドシートをこちらで用意します。</p>
+    <div class="sec-head"><span class="sec-num">9</span><h2>成果の記録（次につなげるために）</h2></div>
+    <p>3回分を1枚の共有シートに残します（シートはこちらで用意）。この1枚が商工会さんへの報告資料にも、次の団体への提案材料にもなります。</p>
     <div class="kpi">
-      <div class="k"><b>申込数・参加数</b><span>会場／オンライン別</span></div>
-      <div class="k"><b>参加率</b><span>申込→当日</span></div>
-      <div class="k"><b>アンケート</b><span>回収数・満足度・生の声</span></div>
-      <div class="k"><b>相談 希望→実施→ご契約</b><span>年度末まで追跡</span></div>
+      <div class="k"><b>申込数・参加数</b><span>回ごと／会場・オンライン別</span></div>
+      <div class="k"><b>宿題シート提出数</b><span>回ごと</span></div>
+      <div class="k"><b>相談予約数 → 実施数</b><span>その場のQR予約を集計</span></div>
+      <div class="k"><b>お手続き件数</b><span>年度末まで追跡</span></div>
     </div>
-    <p>この1枚がそのまま、<span class="hi">商工会さんへの報告資料</span>にも、<span class="hi">次の団体へ提案するときの実績</span>にもなります。当日の様子の写真も、掲載許可を取ったうえで残しておきます。</p>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">9</span><h2>今後に向けて：この座組、一緒に横展開しませんか</h2></div>
-    <p>今回の足柄上商工会さんの形は、<strong>そのまま他の団体にも展開できる座組</strong>だと考えています。</p>
-    <div class="scheme">
-      <div class="box"><b>保険会社・代理店</b><span>団体との接点・信頼<br>声かけ・調整役</span></div>
-      <div class="x">×</div>
-      <div class="box"><b>団体（商工会など）</b><span>会員向けの福利厚生<br>会場・告知</span></div>
-      <div class="x">×</div>
-      <div class="box"><b>fulfull</b><span>講師・教材・チラシ・記録<br>ワンセットで用意</span></div>
-    </div>
-    <p><strong>声かけ先の候補：</strong>他の商工会・商工会議所／自治体と包括連携協定のある地域／業種団体（平塚ロータスクラブ様での開催実績あり）／法人のお客様の社内研修（東京海上日動あんしん生命様との従業員向けセミナー実績あり）</p>
-    <p>講師・教材・チラシ・記録シートまでこちらでワンセット用意するので、<span class="hi">「声かけ先が決まれば、あとは流れに乗せるだけ」</span>の状態にしてあります。</p>
+    <div class="sec-head"><span class="sec-num">10</span><h2>今後に向けて：この座組、一緒に横展開しませんか</h2></div>
+    <p>「社長のお金の勉強会・全3回」は、経営者がいる団体ならどこでも成立します。他の商工会・商工会議所、業種団体、法人のお客様の経営者会など、声かけ先が決まれば同じ流れで動かせます。</p>
     <div class="cta">
-      <p style="margin:0 0 6px"><strong>動き方をまとめたマニュアルを用意しました。</strong>社内でそのまま共有いただけます。</p>
+      <p style="margin:0 0 6px"><strong>動き方をまとめたマニュアルがあります。</strong>社内でそのまま共有できます。</p>
       <a href="manual/">▶ 団体向けマネーセミナー 立ち上げマニュアル（プロモーターの方向け）</a>
     </div>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">10</span><h2>逆算スケジュール（案）</h2></div>
+    <div class="sec-head"><span class="sec-num">11</span><h2>逆算スケジュール</h2></div>
     <ul class="timeline">
-      <li><b>8月中</b><span>日程確定・体裁（主催表記）確定・チラシデザイン方向決め</span></li>
-      <li><b>9月上旬</b><span>チラシ完成（デザインはfulfullで制作）</span></li>
-      <li><b>9月半ば</b><span>会員企業へ郵送①（商工会さん）＋井上さんの個別お声かけ開始</span></li>
-      <li><b>10月</b><span>テーマ・中身の最終すり合わせ／申込受付</span></li>
-      <li><b>11月</b><span>郵送②＋リマインド（参加率がいちばんの分かれ目です）</span></li>
-      <li><b>12月初旬</b><span>セミナー開催（対面＋オンライン）→ 当日アンケートで相談希望を回収</span></li>
-      <li><b>12月〜3月</b><span>個別相談の実施・記録 → 年度末に振り返り＆「次」のご相談</span></li>
+      <li><b>9/10（今日）</b><span>日程パターン・チラシの方向・主催表記・時間帯を決める</span></li>
+      <li><b>今週中</b><span>チラシ完成（デザインはfulfullで制作）→ 商工会さんへ</span></li>
+      <li><b>9月半ば</b><span>会員企業へ郵送①＋井上さんの個別お声かけ開始</span></li>
+      <li><b>10月〜11月</b><span>申込受付／郵送②／リマインド（参加率がいちばんの分かれ目）／接続リハーサル</span></li>
+      <li><b>12/3（木）</b><span>第1回「社長自身を整える」→ 宿題シート＋その場でQR予約</span></li>
+      <li><b>パターン①：12/8・12/11</b><span>第2回・第3回 → 1〜3月は個別相談・お手続きに集中</span></li>
+      <li><b>パターン②：1月中旬・2月上旬</b><span>第2回・第3回 → 3月に個別相談・お手続き</span></li>
+      <li><b>3月末</b><span>3回分の記録で振り返り → 「次」と「他の団体」へ</span></li>
     </ul>
   </section>
 
 </main>
 
-<footer>fulfull株式会社 ｜ 足柄上商工会「お金の勉強会」チームMTG資料</footer>
+<footer>fulfull株式会社 ｜ 足柄上商工会「社長のお金の勉強会」チームMTG資料</footer>
+
 </body>
 </html>
