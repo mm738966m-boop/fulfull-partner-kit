@@ -9,104 +9,113 @@
 <style>
   @page{size:A4;margin:0}
   *{box-sizing:border-box;margin:0;padding:0}
-  :root{--navy:#122a4c;--navy2:#1d3d6b;--gold:#b98a2e;--gold2:#e6c87a;--ink:#1b2433;--soft:#4b5566;--line:#d9dee7;--wash:#eef2f8;--cream:#fbf8f1;
+  :root{--navy:#14294a;--navy2:#1f3c66;--gold:#a8791f;--gold2:#e2c27a;--gold3:#c9a14a;--ink:#1b2433;--soft:#3f4a5c;--line:#e2d9c4;--wash:#f1f4f9;--cream:#fbf7ee;--paper:#fffdf8;
     --serif:"Hiragino Mincho ProN","Yu Mincho",serif;--gothic:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif}
-  body{background:#e9ecf1;font-family:var(--gothic);color:var(--ink);font-feature-settings:"palt" 1}
-  .page{width:210mm;height:297mm;margin:10mm auto;background:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.15)}
+  body{background:#e9ecf1;font-family:var(--gothic);color:var(--ink);font-feature-settings:"palt" 1;font-weight:500}
+  .page{width:210mm;height:297mm;margin:10mm auto;background:var(--paper);position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.15)}
   @media print{body{background:#fff}.page{margin:0;box-shadow:none;page-break-after:always}}
 
   /* ---------- 表面 ---------- */
-  .band{height:3mm;background:linear-gradient(90deg,var(--gold),var(--gold2))}
-  .host{display:flex;justify-content:space-between;align-items:center;background:var(--navy);color:#fff;padding:3mm 10mm;font-size:10pt;font-weight:600;letter-spacing:.03em}
-  .host .free{background:var(--gold);color:#fff;border-radius:99px;padding:1.2mm 5mm;font-size:12pt;font-weight:800}
-  .hero{height:71mm;background:url('heroB.jpg') center 30%/cover;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:0 10mm 7mm}
-  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,24,50,.05) 15%,rgba(9,24,50,.92) 100%)}
-  .hero>*{position:relative}
-  .hero .kicker{display:inline-block;align-self:flex-start;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:99px;padding:1mm 4mm;font-size:10.5pt;font-weight:700;margin-bottom:3mm}
-  .hero h1{font-family:var(--serif);color:#fff;font-size:27pt;line-height:1.3;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.4)}
-  .hero h1::before{content:"";display:block;width:16mm;height:1.3mm;background:var(--gold2);margin-bottom:3mm}
-  .title{padding:5mm 10mm 0;display:flex;align-items:baseline;gap:4mm;flex-wrap:wrap}
-  .title b{font-family:var(--serif);font-size:21pt;color:var(--navy)}
-  .title span{font-size:12pt;font-weight:700;color:var(--gold)}
-  .lead{padding:2mm 10mm 0;font-size:11pt;line-height:1.7;color:var(--soft);font-weight:500}
-  .lead strong{color:var(--navy)}
+  .host{display:flex;justify-content:space-between;align-items:center;background:var(--navy);color:#fff;padding:3mm 10mm;font-size:11.5pt;font-weight:700;letter-spacing:.02em;border-bottom:1mm solid var(--gold3)}
+  .host .free{background:linear-gradient(135deg,var(--gold3),var(--gold));color:#fff;border-radius:99px;padding:1.2mm 5.5mm;font-size:14pt;font-weight:800;letter-spacing:.08em}
+  .hero{height:54mm;background:url('heroB.jpg') center 28%/cover;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:0 10mm 7mm}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.0) 10%,rgba(10,24,48,.55) 45%,rgba(10,24,48,.95) 100%)}
+  .hero::after{content:"";position:absolute;inset:4mm;border:.35mm solid rgba(226,194,122,.55);pointer-events:none}
+  .hero>*{position:relative;z-index:1}
+  .hero .kicker{align-self:flex-start;color:var(--gold2);background:rgba(14,30,56,.88);border:.3mm solid rgba(226,194,122,.7);border-radius:99px;padding:.8mm 4.5mm;font-size:13pt;font-weight:800;letter-spacing:.1em;margin-bottom:2.5mm}
+  .hero h1{font-family:var(--serif);color:#fff;font-size:30pt;line-height:1.28;font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.45);letter-spacing:.02em}
 
-  .rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;padding:4.5mm 10mm 0}
-  .r{border:1.2px solid var(--line);border-radius:3mm;overflow:hidden;background:#fff}
-  .r .date{background:var(--navy);color:#fff;padding:2.5mm 3mm;text-align:center}
-  .r .date .n{font-size:9pt;font-weight:700;letter-spacing:.1em;color:var(--gold2)}
-  .r .date .d{font-size:17pt;font-weight:800;line-height:1.2}
-  .r .date .d small{font-size:10pt;font-weight:700}
-  .r .date .t{font-size:9.5pt;font-weight:600;opacity:.9}
-  .r .body{padding:2.8mm 3mm 3mm}
-  .r .theme{font-size:9pt;font-weight:700;color:var(--gold)}
-  .r h3{font-family:var(--serif);font-size:12.5pt;line-height:1.4;color:var(--navy);margin:.8mm 0 1.8mm}
-  .r ul{list-style:none;font-size:9pt;line-height:1.55;color:var(--ink)}
-  .r li{padding-left:3.2mm;position:relative;margin:.8mm 0}
-  .r li::before{content:"";position:absolute;left:0;top:1.9mm;width:1.6mm;height:1.6mm;border-radius:50%;background:var(--gold)}
+  .title{padding:4.5mm 10mm 0;text-align:center}
+  .title .t1{font-family:var(--serif);font-size:27pt;font-weight:700;color:var(--navy);letter-spacing:.06em;display:inline-flex;align-items:center;gap:5mm}
+  .title .t1::before,.title .t1::after{content:"";width:14mm;height:.4mm;background:var(--gold3)}
+  .chips{display:flex;justify-content:center;gap:2.5mm;margin-top:2.5mm}
+  .chips span{border:.35mm solid var(--gold3);color:var(--navy);background:#fff;border-radius:99px;padding:1mm 4.5mm;font-size:12pt;font-weight:800}
 
-  .info{margin:4.5mm 10mm 0;display:grid;grid-template-columns:1.25fr 1fr;gap:3mm}
-  .box{background:var(--wash);border-radius:3mm;padding:3mm 4mm;font-size:10pt;line-height:1.65}
-  .box .k{font-size:9pt;font-weight:800;color:var(--navy);letter-spacing:.05em;margin-bottom:.8mm}
+  .rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm;padding:4.5mm 10mm 0}
+  .r{border:.35mm solid var(--line);border-radius:3mm;overflow:hidden;background:#fff;box-shadow:0 .6mm 2mm rgba(20,41,74,.06)}
+  .r .date{background:var(--navy);color:#fff;padding:2mm 3mm 2.2mm;text-align:center;position:relative}
+  .r .date .n{font-family:var(--serif);font-size:12pt;font-weight:700;letter-spacing:.15em;color:var(--gold2)}
+  .r .date .d{font-size:23pt;font-weight:800;line-height:1.15;letter-spacing:.02em}
+  .r .date .d small{font-size:13pt;font-weight:700}
+  .r .date .t{font-size:12pt;font-weight:700;color:#e8edf5}
+  .r .body{padding:3mm 3.5mm 3.5mm}
+  .r .theme{font-size:11pt;font-weight:800;color:var(--gold);letter-spacing:.05em}
+  .r h3{font-family:var(--serif);font-size:15pt;line-height:1.4;color:var(--navy);margin:1mm 0 2mm;padding-bottom:2mm;border-bottom:.3mm solid var(--line)}
+  .r ul{list-style:none;font-size:11.5pt;line-height:1.5;color:var(--ink)}
+  .r li{padding-left:4mm;position:relative;margin:1.2mm 0}
+  .r li::before{content:"";position:absolute;left:0;top:2.3mm;width:2mm;height:2mm;border-radius:50%;background:var(--gold3)}
+
+  .info{margin:4mm 10mm 0;display:grid;grid-template-columns:1.15fr 1fr;gap:3.5mm}
+  .box{background:var(--wash);border-radius:3mm;padding:3.2mm 4.5mm;font-size:12pt;line-height:1.6}
+  .box .k{font-family:var(--serif);font-size:12.5pt;font-weight:700;color:var(--navy);margin-bottom:1mm;padding-left:3mm;border-left:1mm solid var(--gold3);line-height:1.2}
   .box b{color:var(--navy)}
   .who{list-style:none}
-  .who li{padding-left:4.5mm;position:relative}
+  .who li{padding-left:5.5mm;position:relative}
   .who li::before{content:"✔";position:absolute;left:0;color:var(--gold);font-weight:800}
 
-  .foot{position:absolute;left:10mm;right:10mm;bottom:9mm;display:flex;gap:4mm;align-items:stretch}
-  .lect{flex:1.2;display:flex;gap:3.5mm;align-items:center;border:1.2px solid var(--line);border-radius:3mm;padding:3mm}
-  .lect img{width:19mm;height:19mm;border-radius:50%;object-fit:cover;border:.7mm solid #fff;box-shadow:0 1mm 3mm rgba(0,0,0,.18)}
-  .lect .nm{font-family:var(--serif);font-size:13pt;font-weight:700;color:var(--navy)}
-  .lect .nm small{font-family:var(--gothic);font-size:8.5pt;color:var(--soft);font-weight:600;margin-left:1.5mm}
-  .lect p{font-size:8.5pt;line-height:1.55;color:var(--soft)}
-  .apply{flex:1;display:flex;gap:3mm;align-items:center;background:var(--navy);color:#fff;border-radius:3mm;padding:3mm 4mm}
-  .qr{width:22mm;height:22mm;flex:0 0 auto;background:#fff;border-radius:1.5mm;display:grid;place-items:center;color:var(--navy);font-size:7.5pt;font-weight:800;text-align:center;line-height:1.3}
-  .apply .a1{font-size:11.5pt;font-weight:800;line-height:1.4}
-  .apply .a2{font-size:8.5pt;line-height:1.5;opacity:.9;margin-top:1mm}
+  .take{margin:4mm 10mm 0;border:.35mm solid var(--gold3);background:var(--cream);border-radius:3mm;padding:3mm 4.5mm;display:flex;gap:4.5mm;align-items:center}
+  .take .tk{flex:0 0 auto;background:var(--gold);color:#fff;font-family:var(--serif);font-weight:700;font-size:12.5pt;border-radius:2mm;padding:2.5mm 3.5mm;line-height:1.35;text-align:center}
+  .take ul{list-style:none;font-size:12pt;line-height:1.6}
+  .take li b{color:var(--navy)}
+
+  .foot{margin:4mm 10mm 0;display:flex;gap:3.5mm;align-items:stretch}
+  .lect{flex:1.15;display:flex;gap:3.5mm;align-items:center;background:#fff;border:.35mm solid var(--line);border-radius:3mm;padding:3mm 3.5mm}
+  .lect img{width:22mm;height:22mm;border-radius:50%;object-fit:cover;border:.8mm solid #fff;box-shadow:0 1mm 3mm rgba(0,0,0,.18);flex:0 0 auto}
+  .lect .nm{font-family:var(--serif);font-size:16pt;font-weight:700;color:var(--navy);line-height:1.3}
+  .lect .nm small{font-family:var(--gothic);font-size:10.5pt;color:var(--gold);font-weight:800;margin-left:2mm}
+  .lect p{font-size:10.5pt;line-height:1.5;color:var(--soft);margin-top:.8mm}
+  .apply{flex:1;display:flex;gap:3.5mm;align-items:center;background:var(--navy);color:#fff;border-radius:3mm;padding:3mm 4mm;border:.35mm solid var(--gold3)}
+  .qr{width:27mm;height:27mm;flex:0 0 auto;background:#fff;border-radius:1.5mm;display:grid;place-items:center}
+  .qr img{width:25mm;height:25mm;display:block}
+  .apply .a1{font-size:15pt;font-weight:800;line-height:1.35}
+  .apply .a2{font-size:11pt;line-height:1.5;margin-top:1.2mm;color:#e8edf5}
   .apply .a2 b{color:var(--gold2)}
 
   /* ---------- 裏面：申込書 ---------- */
-  .p2{padding:12mm 12mm}
-  .p2 .to{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1.5mm solid var(--navy);padding-bottom:3mm}
-  .p2 .to .l{font-size:11pt;font-weight:700;color:var(--soft)}
-  .p2 .to .l b{display:block;font-size:22pt;color:var(--navy);font-family:var(--serif)}
-  .p2 .to .r2{text-align:right;font-size:11pt;line-height:1.7;font-weight:700}
-  .p2 .to .r2 .fax{font-size:20pt;color:var(--navy);font-weight:800}
-  .ph{background:#fff4d6;border-bottom:1px dashed var(--gold);padding:0 1.5mm}
-  .p2 h2{font-family:var(--serif);font-size:19pt;color:var(--navy);margin:7mm 0 1.5mm;text-align:center}
-  .p2 .sub{text-align:center;font-size:10.5pt;color:var(--soft)}
-  table{width:100%;border-collapse:collapse;margin-top:5mm;font-size:11pt}
-  th,td{border:1.2px solid #9aa3b2;padding:3.2mm 3mm;text-align:left;vertical-align:middle}
-  th{background:var(--wash);color:var(--navy);width:34mm;font-weight:800;font-size:10.5pt}
-  .sel td{font-size:10.5pt}
-  .sel .rn{font-weight:800;color:var(--navy);white-space:nowrap}
-  .ck{display:inline-block;width:4.5mm;height:4.5mm;border:1.3px solid #333;vertical-align:-0.8mm;margin:0 1.5mm 0 3mm}
-  .tall{height:13mm}
-  .note{margin-top:5mm;font-size:9pt;line-height:1.65;color:var(--soft)}
-  .note b{color:var(--ink)}
-  .online{margin-top:5mm;background:var(--wash);border-radius:3mm;padding:3.5mm 4.5mm;font-size:10pt;line-height:1.65}
+  .p2{padding:10mm 12mm}
+  .p2 .to{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1.2mm solid var(--navy);padding-bottom:3mm;position:relative}
+  .p2 .to::after{content:"";position:absolute;left:0;right:0;bottom:-2.2mm;height:.35mm;background:var(--gold3)}
+  .p2 .to .l{font-size:12pt;font-weight:700;color:var(--soft)}
+  .p2 .to .l b{display:block;font-size:25pt;color:var(--navy);font-family:var(--serif)}
+  .p2 .to .r2{text-align:right;font-size:12.5pt;line-height:1.6;font-weight:700;color:var(--navy)}
+  .p2 .to .r2 .fax{font-size:26pt;font-weight:800;letter-spacing:.02em}
+  .p2 h2{font-family:var(--serif);font-size:22pt;color:var(--navy);margin:6.5mm 0 1.5mm;text-align:center;letter-spacing:.05em}
+  .p2 .sub{text-align:center;font-size:12.5pt;color:var(--soft);line-height:1.6}
+  .p2 .sub b{color:var(--navy)}
+  table{width:100%;border-collapse:collapse;margin-top:4mm;font-size:13pt;background:#fff}
+  th,td{border:.3mm solid #8f99aa;padding:0 3.5mm;height:12.5mm;text-align:left;vertical-align:middle}
+  th{background:var(--wash);color:var(--navy);width:38mm;font-weight:800;font-size:12.5pt}
+  .sel th{height:10mm;font-size:12pt}
+  .sel td{font-size:12.5pt}
+  .sel .rn{font-weight:800;color:var(--navy);white-space:nowrap;width:46mm}
+  .ck{display:inline-block;width:5.5mm;height:5.5mm;border:.35mm solid #333;border-radius:.6mm;vertical-align:-1.1mm;margin:0 2mm 0 0;background:#fff}
+  .sel td .ck+.ck,.sel td .gap{margin-left:4mm}
+  .when{text-align:left!important;margin-top:2.5mm;font-size:11.5pt!important}
+  .form th,.form td{height:13mm}
+  .form tr.kana th,.form tr.kana td{height:9.5mm;font-size:11pt;border-bottom:.3mm dashed #8f99aa}
+  .form tr.kana + tr th,.form tr.kana + tr td{height:16mm;border-top:none}
+  .blank{display:inline-block;width:20mm}
+  .online{margin-top:4mm;background:var(--wash);border-radius:3mm;padding:3.5mm 5mm;font-size:12pt;line-height:1.6}
   .online b{color:var(--navy)}
-
-  .r ul{font-size:10pt}
-  .r h3{font-size:13pt}
-  .take{margin:4mm 10mm 0;border:1.2px solid var(--gold);background:var(--cream);border-radius:3mm;padding:3mm 4.5mm;display:flex;gap:4mm;align-items:center}
-  .take .tk{flex:0 0 auto;background:var(--gold);color:#fff;font-weight:800;font-size:10pt;border-radius:2mm;padding:2mm 3mm;line-height:1.35;text-align:center}
-  .take ul{list-style:none;font-size:10pt;line-height:1.6}
-  .take li b{color:var(--navy)}
+  .note{margin-top:4.5mm;font-size:10.5pt;line-height:1.6;color:var(--soft)}
+  .note b{color:var(--ink)}
+  .tel{margin-top:2mm;font-size:12pt;font-weight:700;color:var(--navy)}
 </style>
 </head>
 <body>
 
 <!-- ===== 表面 ===== -->
 <section class="page">
-  <div class="band"></div>
-  <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険株式会社</span><span class="free">参加無料</span></div>
+  <div class="host"><span>主催：足柄上商工会 ／ 共催：東京海上日動火災保険</span><span class="free">参加無料</span></div>
   <div class="hero">
-    <span class="kicker">全3回・1回だけの参加もOK</span>
+    <span class="kicker">12月・全3回の勉強会</span>
     <h1>社長も守る。<br>会社も、社員も、家族も守る。</h1>
   </div>
-  <div class="title"><b>社長のお金の勉強会</b><span>全3回／会場＋オンライン同時開催</span></div>
-  <p class="lead">まず、社長自身が整うこと。そこから会社、社員、家族へと守る範囲を広げていく「守る順番」を、3回に分けてやさしくお話しします。<strong>気になるテーマの回だけでも、どうぞ。</strong></p>
+
+  <div class="title">
+    <div class="t1">社長のお金の勉強会</div>
+    <div class="chips"><span>1回だけの参加もOK</span><span>会場＋オンライン</span><span>録画あり</span></div>
+  </div>
 
   <div class="rounds">
     <div class="r">
@@ -117,7 +126,6 @@
         <ul>
           <li>混ざると何が起きる？</li>
           <li>社長の老後は、誰が守る？</li>
-          <li>10分で分かる「守りの順番」</li>
         </ul>
       </div>
     </div>
@@ -127,9 +135,8 @@
         <div class="theme">会社を守る</div>
         <h3>社長が倒れた翌日、<br>会社で何が起きるか</h3>
         <ul>
-          <li>借入・保証・売上、家族に来る電話</li>
-          <li>借入と備えは、セットで考える</li>
-          <li>事業を引き継ぐ「入口」の考え方</li>
+          <li>家族にかかってくる電話</li>
+          <li>借入と備えは、セットで</li>
         </ul>
       </div>
     </div>
@@ -139,9 +146,8 @@
         <div class="theme">社員と家族を守る</div>
         <h3>辞めない会社、<br>揉めない家族</h3>
         <ul>
-          <li>家族・社員に引き継いだ後の実例</li>
-          <li>社員が辞めない、お金の仕組み</li>
-          <li>家族に「残すもの」と「伝えるもの」</li>
+          <li>引き継いだ後の実例</li>
+          <li>社員が辞めない仕組み</li>
         </ul>
       </div>
     </div>
@@ -150,27 +156,28 @@
   <div class="info">
     <div class="box">
       <div class="k">会場・参加方法</div>
-      <b>足柄上商工会 2階</b>（松田町松田惣領2083-2）<br>
-      または <b>ご自宅からオンライン（Zoom）</b>で参加できます。<br>
-      見逃した回は、後日<b>録画でご覧いただけます</b>。
+      <b>足柄上商工会 2階</b><br>
+      松田町松田惣領2083-2<br>
+      ご自宅から<b>オンライン（Zoom）</b>もOK。<br>
+      見逃した回は<b>録画</b>で見られます。
     </div>
     <div class="box">
       <div class="k">こんな方におすすめ</div>
       <ul class="who">
-        <li>経営者・個人事業主・一人親方の方</li>
-        <li>後継ぎの方・ご家族・従業員の方</li>
-        <li>お金のことを一度整理したい方</li>
+        <li>経営者・個人事業主</li>
+        <li>一人親方の方</li>
+        <li>後継ぎ・ご家族・従業員の方</li>
+        <li>お金を一度整理したい方</li>
       </ul>
     </div>
   </div>
 
-
   <div class="take">
-    <div class="tk">各回の<br>おみやげ</div>
+    <div class="tk">参加の<br>おみやげ</div>
     <ul>
-      <li>ご自分の<b>「お金の数字」を1つ</b>持ち帰れます（手元資金は何か月分？ など）</li>
-      <li>計算が気になる方は、<b>個別に30分</b>で一緒に計算します（ご希望の方のみ）</li>
-      <li>3回ご参加の方には<b>「社長のお金の全体設計シート」</b>を個別にお作りします</li>
+      <li>ご自分の<b>「お金の数字」</b>を1つ持ち帰れます</li>
+      <li>ご希望の方は、<b>個別に30分</b>で一緒に計算します</li>
+      <li>3回ご参加で<b>「全体設計シート」</b>をお作りします</li>
     </ul>
   </div>
 
@@ -179,14 +186,14 @@
       <img src="lecturer.jpg" alt="講師 森川満章">
       <div>
         <div class="nm">森川 満章<small>講師</small></div>
-        <p>fulfull株式会社 代表取締役。商工会議所 ビジネスお助け隊・創業塾 役員。むずかしい言葉を使わない「お金の勉強会」を各地で開催。</p>
+        <p>fulfull株式会社 代表取締役。<br>商工会議所 ビジネスお助け隊・<br>創業塾 役員。</p>
       </div>
     </div>
     <div class="apply">
-      <div class="qr"><img src="qr_lp.png" alt="申込ページのQRコード" style="width:20mm;height:20mm;display:block"></div>
+      <div class="qr"><img src="qr_lp.png" alt="申込ページのQRコード"></div>
       <div>
-        <div class="a1">スマホから<br>かんたん申込</div>
-        <div class="a2">各回の<b>直前まで</b>受付中<br>FAX・メールは<b>裏面の申込書</b>で</div>
+        <div class="a1">スマホで<br>かんたん申込</div>
+        <div class="a2">各回の<b>直前まで</b>受付<br>FAXは<b>裏面</b>から</div>
       </div>
     </div>
   </div>
@@ -199,29 +206,30 @@
     <div class="r2">FAX <span class="fax">0465-83-3213</span><br>メール bansoushien@ashigarakami-sci.net</div>
   </div>
   <h2>社長のお金の勉強会　参加申込書</h2>
-  <p class="sub">参加したい回と参加方法に ✓ をつけて、FAXまたはメールでお送りください。<br>各回の<b>直前まで</b>お申し込みいただけます。スマホからは表面のQRコードでも申し込めます。</p>
+  <p class="sub">参加したい回と参加方法に ✓ をつけて、<br>FAXまたはメールでお送りください。<br>各回の<b>直前まで</b>お申し込みいただけます。</p>
 
   <table class="sel">
-    <tr><th>参加する回</th><th style="width:auto">テーマ</th><th style="width:62mm">参加方法</th></tr>
-    <tr><td class="rn"><span class="ck"></span>第1回 12/3（木）</td><td>社長の財布と、会社の財布</td><td><span class="ck"></span>会場<span class="ck"></span>オンライン</td></tr>
-    <tr><td class="rn"><span class="ck"></span>第2回 12/8（火）</td><td>社長が倒れた翌日、会社で何が起きるか</td><td><span class="ck"></span>会場<span class="ck"></span>オンライン</td></tr>
-    <tr><td class="rn"><span class="ck"></span>第3回 12/11（金）</td><td>辞めない会社、揉めない家族</td><td><span class="ck"></span>会場<span class="ck"></span>オンライン</td></tr>
+    <tr><th>参加する回</th><th style="width:auto">テーマ</th><th style="width:58mm">参加方法</th></tr>
+    <tr><td class="rn"><span class="ck"></span>第1回 12/3（木）</td><td>社長の財布と、会社の財布</td><td><span class="ck"></span>会場<span class="ck gap"></span>オンライン</td></tr>
+    <tr><td class="rn"><span class="ck"></span>第2回 12/8（火）</td><td>社長が倒れた翌日、<br>会社で何が起きるか</td><td><span class="ck"></span>会場<span class="ck gap"></span>オンライン</td></tr>
+    <tr><td class="rn"><span class="ck"></span>第3回 12/11（金）</td><td>辞めない会社、<br>揉めない家族</td><td><span class="ck"></span>会場<span class="ck gap"></span>オンライン</td></tr>
   </table>
-  <p class="sub" style="text-align:left;margin-top:2mm;font-size:9.5pt">各回 15:00〜16:30／会場：足柄上商工会 2階（松田町松田惣領2083-2）</p>
+  <p class="sub when">各回 15:00〜16:30／足柄上商工会 2階（松田町松田惣領2083-2）</p>
 
-  <table>
+  <table class="form">
     <tr><th>事業所名</th><td></td></tr>
     <tr><th>業種</th><td></td></tr>
-    <tr><th>ふりがな</th><td></td></tr>
-    <tr><th class="tall">お名前</th><td></td></tr>
-    <tr><th>ご参加人数</th><td>　　　　名（ご家族・後継ぎの方・従業員の方もご一緒にどうぞ）</td></tr>
+    <tr class="kana"><th>ふりがな</th><td></td></tr>
+    <tr><th>お名前</th><td></td></tr>
+    <tr><th>ご参加人数</th><td><span class="blank"></span>名<span style="font-size:11pt;color:var(--soft);margin-left:6mm">（ご家族・後継ぎの方・従業員の方もご一緒にどうぞ）</span></td></tr>
     <tr><th>電話番号</th><td></td></tr>
     <tr><th>メールアドレス</th><td></td></tr>
   </table>
 
-  <div class="online"><b>オンライン参加の方へ</b>：参加用のURLをメールでお送りします。メールアドレスを必ずご記入ください。見逃した回の録画も、同じメールでご案内します。</div>
+  <div class="online"><b>オンライン参加の方へ</b>　参加用のURLをメールでお送りします。<br>見逃した回の録画も、同じメールでご案内します。</div>
 
-  <p class="note"><b>個人情報の取り扱いについて</b>　ご記入いただいた個人情報は、本勉強会の運営およびご連絡のためにのみ使用し、足柄上商工会および運営協力者で共同で管理します。ご本人の同意なく、それ以外の目的で使用・第三者へ提供することはありません。<br>お問い合わせ：足柄上商工会　TEL 0465-83-3211</p>
+  <p class="note"><b>個人情報の取り扱いについて</b>　ご記入いただいた個人情報は、本勉強会の運営およびご連絡のためにのみ使用し、足柄上商工会および運営協力者で共同で管理します。ご本人の同意なく、それ以外の目的で使用・第三者へ提供することはありません。</p>
+  <p class="tel">お問い合わせ：足柄上商工会　TEL 0465-83-3211</p>
 </section>
 
 </body>
