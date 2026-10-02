@@ -68,6 +68,13 @@
   .host{position:absolute;left:6cqw;bottom:2.6cqw;font-size:1.45cqw;color:var(--ink2)}
   .qr{width:17cqw;height:17cqw;border:1px solid var(--line);border-radius:1cqw;padding:.6cqw;background:#fff}
   svg text{font-family:"Noto Sans JP","Hiragino Sans",sans-serif}
+  /* 自己紹介（画像・動画の全面スライド） */
+  .slide.full{padding:0;background:#F8F7F5}
+  .slide.full .pic{position:relative;width:100%;height:100%}
+  .slide.full .pic img{width:100%;height:100%;object-fit:contain;display:block}
+  .fullvid{width:100%;height:100%;object-fit:contain;background:#000;display:block}
+  .slide.full .pic img.st{position:absolute;width:auto;height:auto;object-fit:fill;opacity:0;transition:opacity .4s ease}
+  .slide.full .pic img.st.show{opacity:1}
   /* 操作 */
   .nav{position:fixed;right:14px;bottom:12px;display:flex;gap:8px;align-items:center;z-index:5}
   .nav button{border:0;background:var(--deep);color:#fff;font:inherit;font-size:16px;font-weight:800;border-radius:999px;padding:8px 16px;cursor:pointer;opacity:.85}
@@ -76,8 +83,11 @@
     .deck{display:block;padding:12px 0}
     .slide{display:flex;flex-direction:column;width:100vw;margin:0 0 12px}
     .nav{display:none}
+    .slide.full .pic img.st{opacity:1}
   }
   @media print{
+    .slide.full .pic img.st{opacity:1}
+    .fullvid{display:none}
     @page{size:297mm 167mm;margin:0}
     html,body{background:#fff}
     .deck{display:block}
@@ -117,19 +127,36 @@
   <img class="robot sm" src="../img/mascot_base.webp" alt="">
 </section>
 
-<!-- 3 自己紹介（差し込み） -->
-<section class="slide">
-  <div class="bar"></div>
-  <h2>はじめまして</h2>
-  <div class="row grow">
-    <div style="width:22cqw"><img class="photo" src="../img/lecturer.jpg" alt="講師 森川満章" style="height:22cqw;border-radius:50%"></div>
-    <div class="grow">
-      <p class="big" style="margin-bottom:.4cqw">森川 満章<span class="sm" style="margin-left:1cqw">もりかわ みちあき</span></p>
-      <p>fulfull株式会社 代表取締役。<br>1986年 岩手県出身・横浜在住。<br>30歳まで投資を知らなかった、元ヤマト運輸のドライバー。<br>いまは相談2,000件のお金のプロ。</p>
-      <div class="hold" style="margin-top:1cqw"><b>ここに、いつもの自己紹介スライドを差し込む</b>お金の勉強会で使っている自己紹介（約14分）をそのまま使います。</div>
-    </div>
+<!-- 3〜7 自己紹介（お金の勉強会で使っている自己紹介をそのまま） -->
+<section class="slide full" data-label="紹介動画">
+  <video class="fullvid" src="../video/intro.mp4" poster="../video/intro-poster.jpg" controls playsinline preload="metadata"></video>
+</section>
+<section class="slide full story" data-label="経歴">
+  <div class="pic"><img src="../img/story/base.jpg" alt="経歴：岩手出身、4人兄弟長男、20歳でパパ、14歳離れた弟、3回の転職、ブラック企業、営業職、副業NG、投資、6万円から、初トレ＋150円、離婚→貯金0円、+280万円フラッシュクラッシュ、学びが楽しくなる、−2000万投資、好きなことを仕事に、社会貢献、ふるふる、全部自分の選択">
+  <img class="st" data-step="1" src="../img/story/s01.png" alt="" style="left:5.417%;top:5.185%;width:15.000%;height:13.241%">
+  <img class="st" data-step="2" src="../img/story/s02.png" alt="" style="left:25.417%;top:8.796%;width:20.990%;height:16.204%">
+  <img class="st" data-step="3" src="../img/story/s03.png" alt="" style="left:18.802%;top:13.241%;width:23.906%;height:19.630%">
+  <img class="st" data-step="4" src="../img/story/s04.png" alt="" style="left:2.135%;top:28.889%;width:23.281%;height:11.019%">
+  <img class="st" data-step="5" src="../img/story/s05.png" alt="" style="left:47.500%;top:9.537%;width:29.167%;height:47.500%">
+  <img class="st" data-step="6" src="../img/story/s06.png" alt="" style="left:71.875%;top:6.481%;width:23.490%;height:10.556%">
+  <img class="st" data-step="7" src="../img/story/s07.png" alt="" style="left:78.750%;top:22.778%;width:11.615%;height:10.093%">
+  <img class="st" data-step="8" src="../img/story/s08.png" alt="" style="left:51.823%;top:28.148%;width:13.854%;height:10.648%">
+  <img class="st" data-step="9" src="../img/story/s09.png" alt="" style="left:79.635%;top:44.352%;width:9.531%;height:8.981%">
+  <img class="st" data-step="10" src="../img/story/s10.png" alt="" style="left:4.323%;top:62.222%;width:17.344%;height:6.852%">
+  <img class="st" data-step="11" src="../img/story/s11.png" alt="" style="left:27.031%;top:60.648%;width:24.896%;height:9.074%">
+  <img class="st" data-step="12" src="../img/story/s12.png" alt="" style="left:0.781%;top:46.389%;width:26.771%;height:7.037%">
+  <img class="st" data-step="13" src="../img/story/s13.png" alt="" style="left:2.604%;top:80.278%;width:37.448%;height:17.593%">
+  <img class="st" data-step="14" src="../img/story/s14.png" alt="" style="left:45.833%;top:80.370%;width:30.417%;height:15.926%">
+  <img class="st" data-step="15" src="../img/story/s15.png" alt="" style="left:29.948%;top:75.463%;width:21.510%;height:8.889%">
+  <img class="st" data-step="16" src="../img/story/s16.png" alt="" style="left:55.312%;top:64.352%;width:22.656%;height:18.611%">
+  <img class="st" data-step="17" src="../img/story/s17.png" alt="" style="left:78.750%;top:57.778%;width:15.469%;height:11.944%">
+  <img class="st" data-step="18" src="../img/story/s18.png" alt="" style="left:80.000%;top:85.185%;width:15.000%;height:9.722%">
+  <img class="st" data-step="19" src="../img/story/s19.png" alt="" style="left:31.250%;top:42.222%;width:37.604%;height:15.463%">
   </div>
 </section>
+<section class="slide full" data-label="講師紹介＆会社概要"><div class="pic"><img src="../img/intro-03.jpg" alt="講師紹介＆会社概要"></div></section>
+<section class="slide full" data-label="SNS・メディア展開"><div class="pic"><img src="../img/intro-04.jpg" alt="SNS・メディア展開"></div></section>
+<section class="slide full" data-label="他社・他団体との連携事例"><div class="pic"><img src="../img/intro-05.jpg" alt="他社・他団体との連携事例"></div></section>
 
 <!-- 4 3回参加すると手元に残るもの -->
 <section class="slide">
@@ -425,10 +452,21 @@
   var s=[].slice.call(document.querySelectorAll('.slide')), i=0;
   s.forEach(function(el,k){el.setAttribute('data-n',(k+1)+' / '+s.length);});
   var h=parseInt((location.hash||'').replace('#',''),10); if(h>0&&h<=s.length) i=h-1;
-  function go(n){i=Math.max(0,Math.min(s.length-1,n)); s.forEach(function(el,k){el.classList.toggle('on',k===i);}); document.getElementById('pg').textContent=(i+1)+' / '+s.length; history.replaceState(null,'','#'+(i+1));}
-  document.addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' '].indexOf(e.key)>=0){e.preventDefault();go(i+1);} if(['ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();go(i-1);}});
-  document.getElementById('nx').onclick=function(){go(i+1);}; document.getElementById('pv').onclick=function(){go(i-1);};
-  go(i);
+  function steps(el){var m=el.querySelectorAll('.st'); var mx=0; [].forEach.call(m,function(x){mx=Math.max(mx,+x.dataset.step);}); return mx;}
+  function shown(el){return +(el.dataset.shown||0);}
+  function setShown(el,n){el.dataset.shown=n; [].forEach.call(el.querySelectorAll('.st'),function(x){x.classList.toggle('show',+x.dataset.step<=n);});}
+  function go(n,dir){
+    i=Math.max(0,Math.min(s.length-1,n));
+    s.forEach(function(el,k){el.classList.toggle('on',k===i); var v=el.querySelector('video'); if(v&&k!==i){v.pause();}});
+    var cur=s[i]; if(steps(cur)) setShown(cur, dir<0?steps(cur):0);
+    var v=cur.querySelector('video'); if(v){try{v.currentTime=0; var p=v.play(); if(p&&p.catch) p.catch(function(){});}catch(e){}}
+    document.getElementById('pg').textContent=(i+1)+' / '+s.length; history.replaceState(null,'','#'+(i+1));
+  }
+  function next(){var c=s[i], m=steps(c); if(m&&shown(c)<m){setShown(c,shown(c)+1);return;} go(i+1,1);}
+  function prev(){var c=s[i]; if(steps(c)&&shown(c)>0){setShown(c,shown(c)-1);return;} go(i-1,-1);}
+  document.addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' '].indexOf(e.key)>=0){e.preventDefault();next();} if(['ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();prev();}});
+  document.getElementById('nx').onclick=next; document.getElementById('pv').onclick=prev;
+  go(i,1);
 })();
 </script>
 </body>
