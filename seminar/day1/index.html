@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>第1回 社長の財布と、会社の財布｜社長のお金の勉強会</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="第1回 社長の財布と、会社の財布｜社長のお金の勉強会（スライド）">
+<meta property="og:description" content="12/3（木）15:00〜16:30 足柄上商工会・東京海上日動火災保険 共催">
+<meta property="og:image" content="https://mm738966m-boop.github.io/fulfull-partner-kit/seminar/img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;800&display=swap">
+<style>
+  :root{color-scheme:light;
+    --teal:#0E7C86;--deep:#0A5A62;--ink:#1C3236;--ink2:#4A6468;--soft:#EEF6F7;--line:#D5E4E6;--gold:#A87A1F;--goldfill:#D9A441;--goldbg:#FBF4E3;--bg:#fff;--ok:#1E7D5A;--okbg:#EAF6F0;--warn:#B3401E;--warnbg:#FCEDE8}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#E7EEEF;color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;font-weight:500}
+  .deck{min-height:100vh;display:flex;align-items:center;justify-content:center}
+  .slide{display:none;position:relative;width:min(100vw,177.78vh);aspect-ratio:16/9;background:var(--bg);overflow:hidden;container-type:inline-size;padding:5cqw 6cqw 4.5cqw}
+  .slide.on{display:flex;flex-direction:column;justify-content:center}
+  .slide::after{content:attr(data-n);position:absolute;right:2.4cqw;top:1.6cqw;font-size:1.3cqw;color:var(--ink2)}
+  .bar{position:absolute;left:0;top:0;width:100%;height:.7cqw;background:linear-gradient(90deg,var(--teal),var(--deep))}
+  .tag{display:inline-block;align-self:flex-start;background:var(--soft);color:var(--deep);border:1px solid var(--line);border-radius:999px;padding:.35cqw 1.4cqw;font-size:1.45cqw;font-weight:700;letter-spacing:.06em;margin-bottom:1.6cqw}
+  h1,h2{margin:0;color:var(--deep);font-weight:800;line-height:1.38}
+  h1{font-size:4.6cqw}
+  h2{font-size:3.3cqw;padding-left:1.4cqw;border-left:.55cqw solid var(--goldfill);margin-bottom:2.2cqw}
+  p,li{font-size:2.05cqw;line-height:1.75}
+  p{margin:0 0 1cqw}
+  .big{font-size:3cqw;font-weight:800;color:var(--deep);line-height:1.55}
+  .mid{font-size:2.4cqw;line-height:1.7}
+  .sm{font-size:1.8cqw;color:var(--ink2);line-height:1.65}
+  .em{color:var(--deep);font-weight:800;background:linear-gradient(transparent 62%,rgba(217,164,65,.45) 62%)}
+  .robot{position:absolute;right:4cqw;bottom:3cqw;width:16cqw;height:auto}
+  .robot.sm{width:11cqw}
+  .row{display:flex;gap:2.4cqw;align-items:stretch}
+  .grow{flex:1}
+  .card{background:#fff;border:1px solid var(--line);border-radius:1.4cqw;padding:1.8cqw 2cqw;box-shadow:0 .4cqw 1.4cqw rgba(14,124,134,.07)}
+  .card h3{margin:0 0 .6cqw;font-size:2.2cqw;color:var(--deep);line-height:1.45}
+  .soft{background:var(--soft)}
+  .gold{background:var(--goldbg);border-color:#EAD9AE}
+  .dark{background:var(--deep);color:#fff;border:0}
+  .dark h3{color:#fff}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:3.4cqw;height:3.4cqw;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:1.9cqw;flex:none}
+  .gets{list-style:none;padding:0;margin:.6cqw 0 0;display:grid;gap:.6cqw}
+  .gets li{background:var(--okbg);border-radius:.8cqw;padding:.55cqw 1.1cqw;font-size:1.75cqw;font-weight:700;line-height:1.5}
+  .gets li::before{content:"✓ ";color:var(--ok);font-weight:800}
+  .take{margin-top:.8cqw;background:var(--goldbg);border-radius:.8cqw;padding:.6cqw 1cqw;font-size:1.55cqw;font-weight:700;color:var(--deep);line-height:1.5}
+  .take b{display:block;font-size:1.3cqw;color:var(--gold)}
+  .pill{display:inline-block;background:var(--teal);color:#fff;border-radius:999px;padding:.2cqw 1.1cqw;font-size:1.4cqw;font-weight:800}
+  .hold{border:.25cqw dashed var(--goldfill);background:var(--goldbg);border-radius:1.4cqw;padding:2cqw 2.4cqw;color:var(--gold);font-weight:700}
+  .hold b{display:block;font-size:2.2cqw;color:var(--deep);margin-bottom:.6cqw}
+  .stance{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw}
+  .stance .card{text-align:center;padding:2cqw 1.4cqw}
+  .stance .card .num{margin:0 auto .8cqw}
+  .stance .on{outline:.35cqw solid var(--goldfill);background:var(--goldbg)}
+  .stance .off{opacity:.45}
+  .formula{display:flex;align-items:center;justify-content:center;gap:1.6cqw;font-size:2.6cqw;font-weight:800;color:var(--deep);flex-wrap:wrap}
+  .formula .box{background:#fff;border:.25cqw solid var(--teal);border-radius:1.2cqw;padding:1.2cqw 2cqw;text-align:center;line-height:1.35}
+  .formula .box small{display:block;font-size:1.4cqw;color:var(--ink2);font-weight:700}
+  .formula .ans{background:var(--deep);color:#fff;border-color:var(--deep)}
+  .formula .ans small{color:#CFE7E9}
+  .photo{width:100%;height:100%;object-fit:cover;border-radius:1.4cqw}
+  table.t{border-collapse:collapse;width:100%;font-size:1.7cqw}
+  table.t td{padding:.75cqw 1cqw;border-bottom:1px solid var(--line);line-height:1.5}
+  table.t td:first-child{width:16cqw;color:var(--deep);font-weight:800;white-space:nowrap}
+  .host{position:absolute;left:6cqw;bottom:2.6cqw;font-size:1.45cqw;color:var(--ink2)}
+  .qr{width:17cqw;height:17cqw;border:1px solid var(--line);border-radius:1cqw;padding:.6cqw;background:#fff}
+  svg text{font-family:"Noto Sans JP","Hiragino Sans",sans-serif}
+  /* 操作 */
+  .nav{position:fixed;right:14px;bottom:12px;display:flex;gap:8px;align-items:center;z-index:5}
+  .nav button{border:0;background:var(--deep);color:#fff;font:inherit;font-size:16px;font-weight:800;border-radius:999px;padding:8px 16px;cursor:pointer;opacity:.85}
+  .nav span{background:#fff;border-radius:999px;padding:6px 12px;font-size:14px;color:var(--ink2)}
+  @media (max-width:820px) and (orientation:portrait){
+    .deck{display:block;padding:12px 0}
+    .slide{display:flex;flex-direction:column;width:100vw;margin:0 0 12px}
+    .nav{display:none}
+  }
+  @media print{
+    @page{size:297mm 167mm;margin:0}
+    html,body{background:#fff}
+    .deck{display:block}
+    .slide{display:flex!important;width:297mm;page-break-after:always;break-after:page}
+    .nav{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 1 表紙 -->
+<section class="slide">
+  <div class="bar"></div>
+  <span class="tag">社長のお金の勉強会　全3回</span>
+  <p class="mid" style="color:var(--gold);font-weight:800;margin:0 0 .6cqw">第1回　12月3日（木）15:00〜16:30</p>
+  <h1>社長の財布と、<br>会社の財布</h1>
+  <p class="mid" style="margin-top:1.6cqw;color:var(--ink2)">社長も守る。<br>会社も、社員も、家族も守る。</p>
+  <img class="robot" src="../img/mascot_invite.webp" alt="">
+  <div class="host">共催：足柄上商工会・東京海上日動火災保険株式会社</div>
+</section>
+
+<!-- 2 今日の90分 -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>今日の90分</h2>
+  <table class="t" style="max-width:70cqw">
+    <tr><td>15:00</td><td>はじめに・自己紹介</td></tr>
+    <tr><td>15:20</td><td>3回で、手元に残るもの</td></tr>
+    <tr><td>15:25</td><td>社長のお金は、誰と見ていますか</td></tr>
+    <tr><td>15:40</td><td>財布が混ざると、何が起きるか</td></tr>
+    <tr><td>15:55</td><td>守りの順番</td></tr>
+    <tr><td>16:05</td><td>ワーク：手元のお金は、何か月分？</td></tr>
+    <tr><td>16:20</td><td>今日、1つ決める・次回のご案内</td></tr>
+  </table>
+  <p class="sm" style="margin-top:1.4cqw">オンラインの方は、チャットで質問をどうぞ。<br>スタッフが拾って、こちらにお届けします。</p>
+  <img class="robot sm" src="../img/mascot_base.webp" alt="">
+</section>
+
+<!-- 3 自己紹介（差し込み） -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>はじめまして</h2>
+  <div class="row grow">
+    <div style="width:22cqw"><img class="photo" src="../img/lecturer.jpg" alt="講師 森川満章" style="height:22cqw;border-radius:50%"></div>
+    <div class="grow">
+      <p class="big" style="margin-bottom:.4cqw">森川 満章<span class="sm" style="margin-left:1cqw">もりかわ みちあき</span></p>
+      <p>fulfull株式会社 代表取締役。<br>1986年 岩手県出身・横浜在住。<br>30歳まで投資を知らなかった、元ヤマト運輸のドライバー。<br>いまは相談2,000件のお金のプロ。</p>
+      <div class="hold" style="margin-top:1cqw"><b>ここに、いつもの自己紹介スライドを差し込む</b>お金の勉強会で使っている自己紹介（約14分）をそのまま使います。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 3回参加すると手元に残るもの -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>3回参加すると、手元に残るもの</h2>
+  <div class="row" style="gap:1.4cqw">
+    <div class="card grow">
+      <span class="pill">第1回 12/3（木）今日</span>
+      <h3 style="margin-top:.6cqw">社長自身を整える</h3>
+      <ul class="gets"><li>手元のお金が何か月もつか</li><li>社長と会社のお金の分け方</li><li>老後に向けた最初の一歩</li></ul>
+      <div class="take"><b>持ち帰る数字</b>手元のお金の月数</div>
+    </div>
+    <div class="card grow">
+      <span class="pill">第2回 12/8（火）</span>
+      <h3 style="margin-top:.6cqw">会社を守る</h3>
+      <ul class="gets"><li>もしものときの不足額</li><li>借入・保証の伝え方</li><li>事業を引き継ぐ入口</li></ul>
+      <div class="take"><b>持ち帰る数字</b>もしもの不足額</div>
+    </div>
+    <div class="card grow">
+      <span class="pill">第3回 12/11（金）</span>
+      <h3 style="margin-top:.6cqw">社員と家族を守る</h3>
+      <ul class="gets"><li>引退後に必要な額</li><li>社員が辞めない仕組み</li><li>引き継いだ後の実例</li></ul>
+      <div class="take"><b>持ち帰る数字</b>引退までの差額</div>
+    </div>
+  </div>
+  <div class="card dark" style="margin-top:1.6cqw;display:flex;align-items:center;gap:2cqw;padding:1.4cqw 2cqw">
+    <img src="../img/mascot_point.webp" alt="" style="width:7cqw">
+    <div><p style="margin:0;font-size:2.1cqw;font-weight:800">3つの数字がそろうと、<br>「社長のお金の全体設計シート」ができあがります。</p>
+    <p class="sm" style="margin:.3cqw 0 0;color:#CFE7E9">3回ご参加の方に、個別にお作りします。<br>見逃した回は、録画でご覧いただけます。</p></div>
+  </div>
+</section>
+
+<!-- 5 今日のゴール -->
+<section class="slide">
+  <div class="bar"></div>
+  <span class="tag">今日のゴール</span>
+  <p class="big" style="font-size:4cqw;line-height:1.5">帰り道に、<br><span class="em">「うちの手元のお金は、<br>あと何か月もつか」</span>が<br>分かっている。</p>
+  <img class="robot" src="../img/mascot_think.webp" alt="">
+</section>
+
+<!-- 6 3つの姿勢（1回目） -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>3回を通して、大事にしたい3つの姿勢</h2>
+  <div class="stance">
+    <div class="card"><div class="num">1</div><h3>数字で見る</h3><p class="sm">「なんとなく」を、<br>金額に置きかえる</p></div>
+    <div class="card"><div class="num">2</div><h3>順番を守る</h3><p class="sm">社長自身から。<br>会社、社員と家族へ</p></div>
+    <div class="card"><div class="num">3</div><h3>今日、1つ決める</h3><p class="sm">全部やらなくていい。<br>1つだけ決めて帰る</p></div>
+  </div>
+  <p class="mid" style="margin-top:2.4cqw">この3つは、今日の中で何度も出てきます。<br>最後に、1つ選んでいただきます。</p>
+</section>
+
+<!-- 7 未来の場面 -->
+<section class="slide" style="padding:0">
+  <div style="display:grid;grid-template-columns:1fr 1fr;height:100%">
+    <div style="padding:5cqw 4cqw;display:flex;flex-direction:column;justify-content:center">
+      <span class="tag">3回を終えた、12月の終わりに</span>
+      <p class="big" style="font-size:3cqw">通帳を閉じて、<br>「来年も、<br>これで大丈夫だ」<br>と言える年末。</p>
+      <ul style="padding-left:2cqw;margin:1cqw 0 0;font-size:1.9cqw"><li style="font-size:1.9cqw">社長と会社のお財布が、<br>きちんと分かれている</li><li style="font-size:1.9cqw">もしものとき、家族が<br>何から手をつけるか知っている</li><li style="font-size:1.9cqw">社員に「来年もよろしく」と、<br>迷わず言える</li></ul>
+    </div>
+    <img src="../img/g4.jpg" alt="勉強会の集合写真" style="width:100%;height:100%;object-fit:cover">
+  </div>
+</section>
+
+<!-- 8 原因1 -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>会社のお金は、毎日見ている。<br>社長のお金は、誰と見ていますか。</h2>
+  <div class="row">
+    <div class="card soft grow"><h3>税理士さん</h3><p>見ているのは、<br>会社の決算。</p></div>
+    <div class="card soft grow"><h3>銀行</h3><p>見ているのは、<br>返済の見通し。</p></div>
+    <div class="card gold grow"><h3>社長のお金は？</h3><p>社長個人のお金。<br>もしもの段取り。<br>家族のこれから。</p></div>
+  </div>
+  <p class="mid" style="margin-top:2cqw">この3つを1本の線でつないで見る人は、<br>意外といません。</p>
+</section>
+
+<!-- 9 原因2 守る順番が逆 -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>よくあるのは、「守る順番」が逆になっていること</h2>
+  <div class="row" style="align-items:center">
+    <div class="card grow" style="border-style:dashed;background:#F5F6F6">
+      <span class="tag" style="background:#E6E8EA;color:#5A6070;border-color:#D6D9DE">よくある順番</span>
+      <p class="mid" style="color:#5A6070;font-weight:700">会社 → 社員・家族 → 社長自身<br><span style="color:var(--warn);font-size:1.7cqw">社長自身が、いちばん後回し</span></p>
+    </div>
+    <div style="font-size:3cqw;color:var(--gold);font-weight:800">▶</div>
+    <div class="card grow" style="border:.25cqw solid var(--goldfill)">
+      <span class="tag">この勉強会の順番</span>
+      <p class="mid" style="font-weight:800;color:var(--deep)">① 社長自身　→　② 会社<br>→　③ 社員と家族</p>
+    </div>
+  </div>
+  <p class="mid" style="margin-top:2cqw">社長が倒れれば、<br>会社も社員も家族も一緒に揺れます。<br>だから順番は、<span class="em">社長ご自身から</span>。</p>
+</section>
+
+<!-- 10 姿勢1 数字で見る（2回目） -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="stance" style="margin-bottom:2cqw"><div class="card on"><div class="num">1</div><h3>数字で見る</h3></div><div class="card off"><div class="num">2</div><h3>順番を守る</h3></div><div class="card off"><div class="num">3</div><h3>今日、1つ決める</h3></div></div>
+  <div class="row">
+    <div class="hold grow"><b>僕の場合</b>ここに森川さんの実話（1分）。<br>「なんとなく」が、数字にしたら変わった話。</div>
+    <div class="card soft grow"><h3>今日は</h3><p>「手元のお金は大丈夫かな」を、<br>「あと◯か月分」に置きかえます。</p></div>
+  </div>
+</section>
+
+<!-- 11 財布が混ざると -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>財布が混ざると、何が起きるか</h2>
+  <div class="row">
+    <div class="card grow"><span class="num">1</span><h3 style="margin-top:.8cqw">役員報酬を<br>「なんとなく」決める</h3><p class="sm">会社に残すか、<br>社長に渡すか。<br>決め方で、税金と<br>手元のお金が変わります。</p></div>
+    <div class="card grow"><span class="num">2</span><h3 style="margin-top:.8cqw">会社の口座から<br>個人の支払い</h3><p class="sm">帳簿に<br>「社長への貸し」が残ります。<br>銀行は、<br>ここをよく見ています。</p></div>
+    <div class="card grow"><span class="num">3</span><h3 style="margin-top:.8cqw">個人保証で、<br>財布と借入がつながる</h3><p class="sm">会社の借入が、<br>社長個人と家族の<br>問題になります。</p></div>
+  </div>
+  <p class="mid" style="margin-top:2cqw">どれも、今日すぐに困ることではありません。<br>だからこそ、後回しになりやすいのです。</p>
+</section>
+
+<!-- 12 社長への貸し（図） -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>「社長への貸し」は、こうして増えていく</h2>
+  <svg viewBox="0 0 900 300" style="width:100%;height:auto;margin-top:1cqw" role="img" aria-label="会社の口座から社長個人の支払いをすると、帳簿に社長への貸しが残り、銀行の見え方が変わる">
+    <rect x="20" y="70" width="230" height="140" rx="18" fill="#EEF6F7" stroke="#0E7C86" stroke-width="3"/>
+    <text x="135" y="125" text-anchor="middle" font-size="26" font-weight="800" fill="#0A5A62">会社の口座</text>
+    <text x="135" y="165" text-anchor="middle" font-size="19" fill="#4A6468">売上が入る</text>
+    <path d="M260 140 L380 140" stroke="#D9A441" stroke-width="6" marker-end="url(#ar)"/>
+    <text x="320" y="122" text-anchor="middle" font-size="18" fill="#A87A1F" font-weight="700">個人の支払い</text>
+    <rect x="390" y="70" width="230" height="140" rx="18" fill="#FBF4E3" stroke="#D9A441" stroke-width="3"/>
+    <text x="505" y="125" text-anchor="middle" font-size="26" font-weight="800" fill="#0A5A62">帳簿</text>
+    <text x="505" y="165" text-anchor="middle" font-size="19" fill="#4A6468">「社長への貸し」</text>
+    <path d="M630 140 L750 140" stroke="#0E7C86" stroke-width="6" marker-end="url(#ar2)"/>
+    <rect x="760" y="70" width="120" height="140" rx="18" fill="#fff" stroke="#0E7C86" stroke-width="3"/>
+    <text x="820" y="125" text-anchor="middle" font-size="24" font-weight="800" fill="#0A5A62">銀行</text>
+    <text x="820" y="165" text-anchor="middle" font-size="16" fill="#4A6468">ここを見る</text>
+    <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#D9A441"/></marker><marker id="ar2" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#0E7C86"/></marker></defs>
+  </svg>
+  <p class="mid" style="margin-top:1cqw">分けるだけで、<br>会社のお金も、社長のお金も、見えるようになります。</p>
+</section>
+
+<!-- 13 社長の老後 -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>社長の老後は、誰が守る？</h2>
+  <div class="row">
+    <div class="card soft grow"><h3>会社員</h3><p>退職金は、<br>会社が用意してくれる。</p></div>
+    <div class="card gold grow"><h3>社長</h3><p>社長の退職金は、<br><span class="em">社長が自分で用意する。</span></p></div>
+  </div>
+  <p class="mid" style="margin-top:2cqw">会社のために走り続けて、<br>自分の分は「そのうち」になっていませんか。<br>第3回で、引退までの差額を一緒に出します。</p>
+  <img class="robot sm" src="../img/mascot_think.webp" alt="">
+</section>
+
+<!-- 14 姿勢2 順番を守る（3回目） -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="stance" style="margin-bottom:2cqw"><div class="card off"><div class="num">1</div><h3>数字で見る</h3></div><div class="card on"><div class="num">2</div><h3>順番を守る</h3></div><div class="card off"><div class="num">3</div><h3>今日、1つ決める</h3></div></div>
+  <h2>守りの順番は、この3段</h2>
+  <div class="row">
+    <div class="card grow"><span class="num">1</span><h3 style="margin-top:.8cqw">手元のお金</h3><p class="sm">社長個人と会社、<br>それぞれ何か月もつか。</p></div>
+    <div class="card grow"><span class="num">2</span><h3 style="margin-top:.8cqw">近い将来に使うお金</h3><p class="sm">設備・車・子どもの進学など、<br>数年以内に出ていくお金。</p></div>
+    <div class="card grow"><span class="num">3</span><h3 style="margin-top:.8cqw">そのあとで、将来の準備</h3><p class="sm">社長の退職金づくりは、<br>1と2が整ってから。</p></div>
+  </div>
+</section>
+
+<!-- 15 道具は順番のあと -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>道具は、順番が決まってから選ぶ</h2>
+  <p class="mid">社長の退職金をつくる道具は、いくつかあります。<br>（例：小規模企業共済 など）</p>
+  <div class="card gold" style="margin-top:1.4cqw">
+    <p style="margin:0">ただし、途中で引き出せない道具もあります。<br>手元のお金が足りないまま始めると、<br>いざというときに使えません。</p>
+  </div>
+  <p class="mid" style="margin-top:2cqw">だから今日は、<span class="em">道具の前に「手元のお金」</span>から。</p>
+  <img class="robot sm" src="../img/mascot_point.webp" alt="">
+</section>
+
+<!-- 16 ワーク -->
+<section class="slide">
+  <div class="bar"></div>
+  <span class="tag">ワーク（10分）</span>
+  <h2>手元のお金は、何か月分？</h2>
+  <div class="formula">
+    <div class="box">手元の現金・預金<small>すぐに使えるお金</small></div>
+    <div>÷</div>
+    <div class="box">毎月出ていくお金<small>固定費・生活費</small></div>
+    <div>＝</div>
+    <div class="box ans">◯か月分<small>今日の数字</small></div>
+  </div>
+  <div class="row" style="margin-top:2.4cqw">
+    <div class="card soft grow"><h3>会社の分</h3><p class="sm">会社の預金 ÷ 毎月の固定費<br>（人件費・家賃・返済など）</p></div>
+    <div class="card soft grow"><h3>社長個人の分</h3><p class="sm">個人の預金 ÷ 毎月の生活費</p></div>
+  </div>
+  <p class="sm" style="margin-top:1cqw">分からないところは、だいたいで大丈夫です。<br>宿題シートの「計算メモ」に書いてください。</p>
+</section>
+
+<!-- 17 目安 -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>出てきた数字の、ひとつの目安</h2>
+  <div class="row">
+    <div class="card grow"><h3>会社</h3><p class="big" style="margin:.4cqw 0">固定費の3か月分〜</p><p class="sm">業種や季節の波で変わります。</p></div>
+    <div class="card grow"><h3>社長個人</h3><p class="big" style="margin:.4cqw 0">生活費の6か月分〜</p><p class="sm">ご家族の状況で変わります。</p></div>
+  </div>
+  <p class="mid" style="margin-top:2cqw">大事なのは、目安に届いているかより、<br><span class="em">「今の月数を知っている」</span>ことです。</p>
+  <p class="sm">※ よく使われる目安です。<br>会社ごとに適した月数は、個別に一緒に考えます。</p>
+</section>
+
+<!-- 18 姿勢3 今日1つ決める（4回目） -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="stance" style="margin-bottom:2cqw"><div class="card off"><div class="num">1</div><h3>数字で見る</h3></div><div class="card off"><div class="num">2</div><h3>順番を守る</h3></div><div class="card on"><div class="num">3</div><h3>今日、1つ決める</h3></div></div>
+  <h2>どれか1つだけ、決めて帰りましょう</h2>
+  <div class="row">
+    <div class="card grow"><p style="margin:0;font-weight:800">□ 社長個人の口座と、<br>会社の口座を分ける</p></div>
+    <div class="card grow"><p style="margin:0;font-weight:800">□ 役員報酬の決め方を、<br>見直す日を決める</p></div>
+    <div class="card grow"><p style="margin:0;font-weight:800">□ 手元のお金の、<br>目標の月数を決める</p></div>
+  </div>
+  <p class="sm" style="margin-top:1.4cqw">宿題シートの下に、チェックを入れてください。</p>
+</section>
+
+<!-- 19 宿題シート -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>宿題シートの使い方</h2>
+  <div class="row">
+    <div class="card grow"><span class="num">1</span><h3 style="margin-top:.8cqw">数字を書く</h3><p class="sm">会社と社長個人、<br>それぞれの月数。</p></div>
+    <div class="card grow"><span class="num">2</span><h3 style="margin-top:.8cqw">1つ決める</h3><p class="sm">3つの中から1つに<br>チェック。</p></div>
+    <div class="card grow"><span class="num">3</span><h3 style="margin-top:.8cqw">持って帰る</h3><p class="sm">第3回で、3つの数字を<br>1枚につなげます。</p></div>
+  </div>
+  <p class="mid" style="margin-top:2cqw">計算に迷ったら、<br>個別の30分で一緒に出しましょう。</p>
+</section>
+
+<!-- 20 個別30分 -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>宿題の数字を、30分で一緒に出します</h2>
+  <div class="row" style="align-items:center">
+    <div class="grow">
+      <ul class="gets" style="gap:.9cqw"><li>宿題シートの数字が、実際の金額で出ます</li><li>次に何から手をつけるかが決まります</li><li>対面（商工会）かオンラインか、選べます</li></ul>
+      <p class="mid" style="margin-top:1.6cqw">ご希望の方だけで大丈夫です。<br>右のQRから、1分で予約できます。</p>
+    </div>
+    <div style="text-align:center"><img class="qr" src="../img/qr_soudan_r1.png" alt="個別相談の予約ページのQRコード"><p class="sm" style="margin:.4cqw 0 0">スマホのカメラで読み取り</p></div>
+  </div>
+</section>
+
+<!-- 21 アンケート -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>最後に、3つだけ教えてください</h2>
+  <div class="row">
+    <div class="card grow"><h3>Q1</h3><p class="sm">いちばん気になる数字は？</p></div>
+    <div class="card grow"><h3>Q2</h3><p class="sm">明日から続けたい<br>姿勢は？</p></div>
+    <div class="card grow"><h3>Q3</h3><p class="sm">個別の30分で、<br>一緒に計算しますか？</p></div>
+  </div>
+  <p class="mid" style="margin-top:2cqw">○をつけるだけ、1分で終わります。<br>受付でお預かりします。</p>
+  <p class="sm">オンラインの方は、チャットに出す予約ページからどうぞ。</p>
+</section>
+
+<!-- 22 次回 -->
+<section class="slide">
+  <div class="bar"></div>
+  <span class="tag">次回のご案内</span>
+  <p class="mid" style="color:var(--gold);font-weight:800;margin:0">第2回　12月8日（火）15:00〜16:30</p>
+  <h1 style="font-size:3.8cqw">社長が倒れた翌日、<br>会社で何が起きるか</h1>
+  <ul class="gets" style="max-width:60cqw;margin-top:1.4cqw"><li>もしものとき、会社と家族に足りない額が分かる</li><li>借入や保証のことを、家族に何から伝えるかが整う</li></ul>
+  <p class="sm" style="margin-top:1.2cqw">今日の「手元のお金の月数」を、そのまま使います。<br>宿題シートを、お持ちください。</p>
+  <img class="robot sm" src="../img/mascot_invite.webp" alt="">
+</section>
+
+<!-- 23 3つの姿勢（5回目）まとめ -->
+<section class="slide">
+  <div class="bar"></div>
+  <h2>今日の3つの姿勢</h2>
+  <div class="stance">
+    <div class="card"><div class="num">1</div><h3>数字で見る</h3><p class="sm">手元のお金を、<br>月数で知った</p></div>
+    <div class="card"><div class="num">2</div><h3>順番を守る</h3><p class="sm">道具の前に、<br>手元のお金から</p></div>
+    <div class="card"><div class="num">3</div><h3>今日、1つ決める</h3><p class="sm">宿題シートに<br>1つチェック</p></div>
+  </div>
+  <p class="mid" style="margin-top:2.4cqw">明日から続けたい姿勢を、<br>1つだけ選んでください。</p>
+</section>
+
+<!-- 24 おわり -->
+<section class="slide">
+  <div class="bar"></div>
+  <p class="big" style="font-size:4cqw;margin-top:4cqw">今日は、<br>ありがとうございました。</p>
+  <p class="mid" style="color:var(--ink2)">12月8日（火）、またお会いしましょう。</p>
+  <img class="robot" src="../img/mascot_base.webp" alt="">
+  <div class="host">共催：足柄上商工会・東京海上日動火災保険株式会社　／　運営：fulfull株式会社</div>
+</section>
+
+</div>
+<div class="nav"><button id="pv" aria-label="前へ">←</button><span id="pg">1 / 1</span><button id="nx" aria-label="次へ">→</button></div>
+<script>
+(function(){
+  var s=[].slice.call(document.querySelectorAll('.slide')), i=0;
+  s.forEach(function(el,k){el.setAttribute('data-n',(k+1)+' / '+s.length);});
+  var h=parseInt((location.hash||'').replace('#',''),10); if(h>0&&h<=s.length) i=h-1;
+  function go(n){i=Math.max(0,Math.min(s.length-1,n)); s.forEach(function(el,k){el.classList.toggle('on',k===i);}); document.getElementById('pg').textContent=(i+1)+' / '+s.length; history.replaceState(null,'','#'+(i+1));}
+  document.addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' '].indexOf(e.key)>=0){e.preventDefault();go(i+1);} if(['ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();go(i-1);}});
+  document.getElementById('nx').onclick=function(){go(i+1);}; document.getElementById('pv').onclick=function(){go(i-1);};
+  go(i);
+})();
+</script>
+</body>
+</html>
